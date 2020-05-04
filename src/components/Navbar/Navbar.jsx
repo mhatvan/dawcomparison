@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import { GithubOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
   const [burgerMenuActive, setBurgerMenuActive] = useState("");
@@ -23,7 +24,6 @@ const Navbar = () => {
             <span className="icon is-medium brand">
               <i className="far fa-chart-bar" />
             </span>
-            {/* <img src="https://bulma.io/images/placeholders/48x48.png" alt="" /> */}
             <span style={{ marginLeft: 10 }}>
               <strong>DAW Comparison</strong>{" "}
             </span>
@@ -35,7 +35,7 @@ const Navbar = () => {
             className={`navbar-burger burger ${burgerMenuActive}`}
             aria-label="menu"
             aria-expanded="false"
-            data-target="navbarBasicExample"
+            data-target="navbarResponsive"
             tabIndex="0"
           >
             <span aria-hidden="true" />
@@ -45,16 +45,22 @@ const Navbar = () => {
         </div>
 
         <div
-          id="navbarBasicExample"
+          id="navbarResponsive"
           className={`navbar-menu ${burgerMenuActive}`}
         >
           <div className="navbar-end">
             <Link to="/about" className="navbar-item">
               <strong>About</strong>
             </Link>
-            <Link to="/contact" className="navbar-item">
-              <strong>Contact</strong>
-            </Link>
+
+            <a
+              href="https://github.com/mhatvan/dawcomparison"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar-item"
+            >
+              <GithubOutlined />
+            </a>
           </div>
         </div>
       </nav>

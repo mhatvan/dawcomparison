@@ -6,7 +6,7 @@ cover: "images/audacity.png"
 logo: "logos/audacity.svg"
 category: "random"
 date: "2017-03-02"
-slug: "pro-tools"
+slug: "audacity"
 tags:
   - say hi
 usage: "TEST"

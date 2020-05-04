@@ -24,6 +24,13 @@ module.exports = {
     "gatsby-plugin-lodash",
     "gatsby-plugin-antd",
     {
+      resolve: "gatsby-plugin-import",
+      options: {
+        libraryName: "antd",
+        style: true, // or 'css'
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",

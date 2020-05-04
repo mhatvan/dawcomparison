@@ -1,0 +1,4 @@
+backend:
+  name: github # Refer to https://www.netlifycms.org/docs/authentication-backends/ for auth backend list and instructions
+  branch: master # Branch to update
+  repo: mhatvan/dawcomparison
