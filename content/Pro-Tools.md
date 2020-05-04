@@ -1,6 +1,7 @@
 ---
 title: "Pro Tools"
 maker: "Avid"
+version: "2020"
 cover: "images/protools.jpg"
 logo: "logos/protools.png"
 category: "random"
@@ -15,6 +16,8 @@ os:
   - macOS
 useCase: "all"
 genre: "Any genre"
+video: "https://www.youtube.com/embed/9kZp25dSd0g"
+website: "https://www.avid.com/pro-tools"
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

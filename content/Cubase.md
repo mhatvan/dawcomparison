@@ -1,5 +1,6 @@
 ---
 title: "Cubase"
+version: "10.5"
 maker: "Steinberg"
 cover: "images/cubase.png"
 logo: "logos/cubase.png"
@@ -15,6 +16,8 @@ os:
   - macOS
 useCase: "all"
 genre: "Any genre"
+video: "https://www.youtube.com/embed/lSZ8yX1viV8"
+website: "https://www.steinberg.net/en/home.html"
 ---
 
 # Cubase has been around for a long time and remains popular to this day. It’s innovative, trustworthy and stable

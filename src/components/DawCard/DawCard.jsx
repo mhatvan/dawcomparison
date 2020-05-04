@@ -22,6 +22,8 @@ const DawCard = ({ postEdges }) => {
       useCase: node.frontmatter.useCase,
       maker: node.frontmatter.maker,
       logo: node.frontmatter.logo,
+      version: node.frontmatter.version,
+      website: node.frontmatter.website,
     }));
   };
 
@@ -46,20 +48,56 @@ const DawCard = ({ postEdges }) => {
   return (
     <>
       <div className="container">
-        <p className="control has-icons-left">
-          <input
-            className="input"
-            type="text"
-            placeholder="Search"
-            onChange={handleSearch}
-          />
-          <span className="icon is-left">
-            <i className="fas fa-search" aria-hidden="true" />
-          </span>
-        </p>
+        <div className="columns">
+          <div className="column is-two-thirds">
+            <p className="control has-icons-left">
+              <input
+                className="input"
+                type="text"
+                placeholder="Search"
+                onChange={handleSearch}
+              />
+              <span className="icon is-left">
+                <i className="fas fa-search" aria-hidden="true" />
+              </span>
+            </p>
+          </div>
+
+          <div className="column is-one-third">
+            <div className="dropdown is-hoverable">
+              <div className="dropdown-trigger">
+                <button
+                  type="button"
+                  className="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu"
+                >
+                  <span>OS</span>
+                  <span className="icon is-small">
+                    <i className="fas fa-angle-down" aria-hidden="true" />
+                  </span>
+                </button>
+              </div>
+              <div className="dropdown-menu" id="dropdown-menu" role="menu">
+                <div className="dropdown-content">
+                  <a href="#" className="dropdown-item">
+                    Windows
+                  </a>
+                  <a href="#" className="dropdown-item">
+                    macOS
+                  </a>
+                  <a href="#" className="dropdown-item">
+                    Linux
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <hr />
 
-        {filteredData.length === 0 && (
+        {query && filteredData.length === 0 && (
           <div>No DAWs found with this search term</div>
         )}
 
@@ -82,7 +120,7 @@ const DawCard = ({ postEdges }) => {
                       <div className="media-content">
                         <p className="title is-4">
                           <Link to={post.path} key={post.title}>
-                            {post.title}
+                            {post.title} {post.version}
                           </Link>
                         </p>
 
@@ -110,7 +148,7 @@ const DawCard = ({ postEdges }) => {
                           <span className="icon has-text-info">
                             <i className="fas fa-desktop" />
                           </span>
-                          {post.os.join(", ")}
+                          {post.os && post.os.join(", ")}
                           <br />
                         </p>
                       </div>
@@ -124,14 +162,13 @@ const DawCard = ({ postEdges }) => {
                     <div className="content">{post.excerpt}</div>
                   </div>
                   <footer className="card-footer">
-                    <a href="#" className="card-footer-item">
-                      Save
-                    </a>
-                    <a href="#" className="card-footer-item">
-                      Edit
-                    </a>
-                    <a href="#" className="card-footer-item">
-                      Delete
+                    <a
+                      href={post.website}
+                      className="card-footer-item"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Website
                     </a>
                   </footer>
                 </div>
@@ -139,6 +176,12 @@ const DawCard = ({ postEdges }) => {
             );
           })}
         </div>
+        <article className="message is-info is-medium">
+          <div className="message-body">
+            Didn't find the DAW you were looking for? Write me on GitHub or
+            Email to include it.
+          </div>
+        </article>
       </div>
     </>
   );

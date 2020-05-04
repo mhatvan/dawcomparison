@@ -45,6 +45,8 @@ export const pageQuery = graphql`
             useCase
             maker
             logo
+            version
+            website
           }
         }
       }

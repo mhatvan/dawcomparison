@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 
 const Navbar = () => {
+  const [burgerMenuActive, setBurgerMenuActive] = useState("");
+
+  const toggleBurgerMenu = () => {
+    return burgerMenuActive
+      ? setBurgerMenuActive("")
+      : setBurgerMenuActive("is-active");
+  };
+
   return (
     <>
       <nav
@@ -12,14 +20,34 @@ const Navbar = () => {
       >
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
-            <img src="https://bulma.io/images/placeholders/48x48.png" alt="" />
-            <span className="" style={{ marginLeft: 10 }}>
-              DAW Comparison
+            <span className="icon is-medium brand">
+              <i className="far fa-chart-bar" />
+            </span>
+            {/* <img src="https://bulma.io/images/placeholders/48x48.png" alt="" /> */}
+            <span style={{ marginLeft: 10 }}>
+              <strong>DAW Comparison</strong>{" "}
             </span>
           </Link>
+          <div
+            onClick={toggleBurgerMenu}
+            onKeyUp={toggleBurgerMenu}
+            role="button"
+            className={`navbar-burger burger ${burgerMenuActive}`}
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+            tabIndex="0"
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </div>
         </div>
 
-        <div className="navbar-menu">
+        <div
+          id="navbarBasicExample"
+          className={`navbar-menu ${burgerMenuActive}`}
+        >
           <div className="navbar-end">
             <Link to="/about" className="navbar-item">
               <strong>About</strong>

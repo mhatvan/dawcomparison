@@ -1,26 +1,27 @@
 ---
-title: "FL Studio"
-version: "20"
-maker: "Image-Line"
-cover: "images/flstudio.jpg"
-logo: "logos/flstudio.jpg"
-category: "moar"
-date: "2018-03-01"
-slug: "fl-studio"
+title: "Audacity"
+maker: "Audacity"
+version: "2.3.3"
+cover: "images/audacity.png"
+logo: "logos/audacity.svg"
+category: "random"
+date: "2017-03-02"
+slug: "pro-tools"
 tags:
-  - test
-  - huge
-test: "TEST"
-price: "$599"
+  - say hi
+usage: "TEST"
+price: "Free"
 os:
   - Windows
+  - macOS
+  - Linux
 useCase: "all"
 genre: "Any genre"
-video: "https://www.youtube.com/embed/AuqqiuaLYJA"
-website: "https://www.image-line.com/flstudio/"
+video: "https://www.youtube.com/embed/LQ7n9pA0qc0"
+website: "https://www.audacityteam.org/"
 ---
 
-# NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents
+# Industry standard DAW running on DSP cards for greater power and stability
 
 ## Mendaci pinu ipsi nunc
 
@@ -36,5 +37,3 @@ Oenopiis longi ore paretur? Sede ore quaedam dumque. Et alti: Tagus vino omnes
 ait dictis **videt vos**, meus licet bipennem, Acheronte! Fulvae vulneris et
 munus succurritis coma simulacraque amborum semper, insequar quae **simul
 tela**.
-
-<pre><code>ergerg</code></pre>

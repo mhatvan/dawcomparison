@@ -19,19 +19,6 @@ const config = {
   userLocation: "Vienna, Austria", // User location to display in the author segment.
   userAvatar: "", // User avatar to display in the author segment.
   userDescription: "", // User description to display in the author segment.
-  // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
-    {
-      label: "GitHub",
-      url: "https://github.com/mhatvan",
-      iconClassName: "fa fa-github",
-    },
-    {
-      label: "Email",
-      url: "mailto:markus_hatvan@aon.at",
-      iconClassName: "fa fa-envelope",
-    },
-  ],
   copyright: `Copyright © ${new Date().getFullYear()} Markus Hatvan`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.

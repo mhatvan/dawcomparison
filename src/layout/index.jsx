@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 import "./index.scss";
 
@@ -18,6 +19,7 @@ export default class MainLayout extends React.Component {
           </Helmet>
           {children}
         </div>
+        <Footer config={config} />
       </>
     );
   }

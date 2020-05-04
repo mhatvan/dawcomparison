@@ -1,5 +1,6 @@
 ---
 title: "Live"
+version: "10"
 maker: "Ableton"
 logo: "logos/abletonlive.png"
 cover: "images/abletonlive.jpg"
@@ -15,6 +16,8 @@ os:
   - macOS
 useCase: "all"
 genre: "Any genre"
+video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
+website: "https://www.ableton.com/en/"
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

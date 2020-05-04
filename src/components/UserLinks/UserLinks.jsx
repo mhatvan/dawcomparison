@@ -2,24 +2,30 @@ import React, { Component } from "react";
 import "./UserLinks.css";
 
 class UserLinks extends Component {
-  getLinkElements() {
-    const { userLinks } = this.props.config;
-    const { labeled } = this.props;
-    return userLinks.map(link => (
-      <a href={link.url}>
-        <button type="button" key={link.label}>
-          {labeled ? link.label : ""}
-        </button>
-      </a>
-    ));
-  }
-
   render() {
-    const { userLinks } = this.props.config;
-    if (!userLinks) {
-      return null;
-    }
-    return <div className="user-links">{this.getLinkElements()}</div>;
+    return (
+      <div className="user-links">
+        <p className="buttons">
+          <a
+            href="https://github.com/mhatvan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button is-dark"
+          >
+            <span className="icon">
+              <i className="fab fa-github" />
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:markus_hatvan@aon.at" className="button is-link">
+            <span className="icon">
+              <i className="fas fa-envelope" />
+            </span>
+            <span>Email</span>
+          </a>
+        </p>
+      </div>
+    );
   }
 }
 

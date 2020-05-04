@@ -13,17 +13,25 @@ body {
   min-width: 100%;
 }
 
+.brand {
+  background: #3b58bf8f;
+  border-radius: 50%;
+  color: white;
+}
+
 // #___gatsby #gatsby-focus-wrapper {
 //   min-height: 100vh;
 //   min-width: 100vw;
 // }
 
 .layout-container {
-  /* min-height: calc(100vh - 82px); */
+  min-height: calc(100vh - 132px); // navbar 52, footer 80
   /* min-width: 100vw; */
   display: flex;
   padding: 20px;
+  background: ghostwhite;
 }
 
 @import "~bulma/bulma.sass";
 @import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~antd/dist/antd.css";

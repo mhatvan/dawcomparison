@@ -66,6 +66,8 @@ exports.createPages = async ({ graphql, actions }) => {
               genre
               useCase
               maker
+              version
+              website
             }
           }
         }
