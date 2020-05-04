@@ -4,13 +4,8 @@ version: "20"
 maker: "Image-Line"
 cover: "images/flstudio.jpg"
 logo: "logos/flstudio.jpg"
-category: "moar"
-date: "2018-03-01"
+date: "2017-03-02"
 slug: "fl-studio"
-tags:
-  - test
-  - huge
-test: "TEST"
 price: "$599"
 os:
   - Windows

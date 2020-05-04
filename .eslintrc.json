@@ -12,7 +12,9 @@
         "specialLink": ["hrefLeft", "hrefRight", "to"],
         "aspects": ["noHref", "invalidHref", "preferButton"]
       }
-    ]
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off"
   },
   "settings": {
     "import/core-modules": []

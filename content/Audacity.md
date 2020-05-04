@@ -1,15 +1,11 @@
 ---
 title: "Audacity"
-maker: "Audacity"
 version: "2.3.3"
+maker: "Audacity"
 cover: "images/audacity.png"
 logo: "logos/audacity.svg"
-category: "random"
 date: "2017-03-02"
 slug: "audacity"
-tags:
-  - say hi
-usage: "TEST"
 price: "Free"
 os:
   - Windows

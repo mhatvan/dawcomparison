@@ -58,8 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
             frontmatter {
               title
-              tags
-              category
+              cover
               date
               price
               os

@@ -1,24 +1,22 @@
+import { LayoutOutlined, UnorderedListOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
 import React, { useState } from "react";
 import {
-  Alert,
+  Button,
   Col,
-  Divider,
   Input,
+  Result,
   Row,
   Select,
   Slider,
-  Title,
-  Result,
-  Button,
+  Table,
 } from "../../../node_modules/antd/lib/index";
 
 const initialState = {
   filteredData: [],
-  osFilterActive: false,
-  makerFilterActive: false,
-  priceFilterActive: false,
+  filterActive: false,
   query: "",
+  viewmode: "card",
 };
 
 const DawCard = ({ postEdges }) => {
@@ -27,12 +25,8 @@ const DawCard = ({ postEdges }) => {
   const getPostList = () => {
     return (postEdges || []).map(({ node }) => ({
       path: node.fields.slug,
-      tags: node.frontmatter.tags,
       cover: node.frontmatter.cover,
       title: node.frontmatter.title,
-      date: node.fields.date,
-      excerpt: node.excerpt,
-      timeToRead: node.timeToRead,
       price: node.frontmatter.price,
       os: node.frontmatter.os,
       genre: node.frontmatter.genre,
@@ -54,6 +48,7 @@ const DawCard = ({ postEdges }) => {
     });
 
     setState({
+      ...state,
       query,
       filteredData,
     });
@@ -62,8 +57,9 @@ const DawCard = ({ postEdges }) => {
   const handleOSFilter = (value) => {
     if (!value) {
       return setState({
+        ...state,
         filteredData: postList,
-        osFilterActive: false,
+        filterActive: false,
       });
     }
 
@@ -72,16 +68,18 @@ const DawCard = ({ postEdges }) => {
     });
 
     return setState({
+      ...state,
       filteredData,
-      osFilterActive: true,
+      filterActive: true,
     });
   };
 
   const handleMakerFilter = (value) => {
     if (!value || value.length === 0) {
       return setState({
+        ...state,
         filteredData: postList,
-        makerFilterActive: false,
+        filterActive: false,
       });
     }
 
@@ -90,8 +88,9 @@ const DawCard = ({ postEdges }) => {
     });
 
     return setState({
+      ...state,
       filteredData,
-      makerFilterActive: true,
+      filterActive: true,
     });
   };
 
@@ -105,28 +104,23 @@ const DawCard = ({ postEdges }) => {
     });
 
     setState({
+      ...state,
       filteredData,
-      priceFilterActive: true,
+      filterActive: true,
     });
   };
 
-  const uniqueMakers = postList.map((post) => post.maker);
-
+  const uniqueMakers = postList
+    .map((post) => post.maker)
+    .filter((os, idx, arr) => arr.indexOf(os) === idx);
   const allOS = postList.map((post) => post.os);
   const uniqueOS = allOS
     .flat()
     .filter((os, idx, arr) => arr.indexOf(os) === idx);
 
-  const {
-    filteredData,
-    query,
-    osFilterActive,
-    priceFilterActive,
-    makerFilterActive,
-  } = state;
+  const { filteredData, query, filterActive, viewmode } = state;
 
-  const activeFiltering =
-    query || osFilterActive || priceFilterActive || makerFilterActive;
+  const activeFiltering = query || filterActive;
 
   const posts = activeFiltering ? filteredData : postList;
 
@@ -138,9 +132,66 @@ const DawCard = ({ postEdges }) => {
     2000: "$2000",
   };
 
+  const mapThis = posts.map((post) => {
+    return {
+      key: post.path,
+      title: `${post.title} ${post.version}`,
+      maker: post.maker,
+      os: post.os.join(", "),
+      price: post.price,
+      website: post.website,
+    };
+  });
+
+  const columns = [
+    {
+      title: "Title",
+      dataIndex: "title",
+      key: "title",
+      sorter: (a, b) => {
+        return a.title.localeCompare(b.title);
+      },
+    },
+    {
+      title: "Maker",
+      dataIndex: "maker",
+      key: "maker",
+      sorter: (a, b) => {
+        return a.maker.localeCompare(b.maker);
+      },
+    },
+    {
+      title: "OS",
+      dataIndex: "os",
+      key: "os",
+    },
+    {
+      title: "Price",
+      dataIndex: "price",
+      key: "price",
+      defaultSortOrder: "ascend",
+      sorter: (a, b) => {
+        const priceA = a.price === "Free" ? 0 : +a.price.replace("$", "");
+        const priceB = b.price === "Free" ? 0 : +b.price.replace("$", "");
+
+        return priceA - priceB;
+      },
+    },
+    {
+      title: "Website",
+      dataIndex: "website",
+      key: "website",
+      render: (text) => (
+        <a href={text} target="_blank" rel="noopener noreferrer">
+          {text}
+        </a>
+      ),
+    },
+  ];
+
   return (
     <div className="container">
-      <Row gutter={[16, 8]}>
+      <Row gutter={[16, 16]} align="middle">
         <Col xs={24} sm={24} md={10} lg={10} xl={6} xxl={6}>
           <Input
             placeholder="Search for your favorite DAW"
@@ -183,7 +234,7 @@ const DawCard = ({ postEdges }) => {
             })}
           </Select>
         </Col>
-        <Col xs={24} xl={8} xxl={8}>
+        <Col xs={24} xl={{ span: 6, offset: 1 }} xxl={{ span: 6, offset: 1 }}>
           <Slider
             tipFormatter={(value) => `$${value}`}
             range
@@ -196,90 +247,117 @@ const DawCard = ({ postEdges }) => {
           />
         </Col>
       </Row>
-
-      <Row gutter={[16, 16]}>
-        <Col xs={24}>
+      <Row gutter={[16, 16]} align="bottom">
+        <Col xs={12}>
           {activeFiltering ? filteredData.length : postList.length} out of{" "}
           {postList.length} DAWs
         </Col>
+        <Col xs={12} style={{ textAlign: "right" }}>
+          <Button.Group>
+            <Button
+              onClick={() => setState({ ...state, viewmode: "list" })}
+              icon={<UnorderedListOutlined />}
+              {...(viewmode === "list" ? { type: "primary" } : {})}
+            />
+            <Button
+              onClick={() => setState({ ...state, viewmode: "card" })}
+              icon={<LayoutOutlined />}
+              {...(viewmode === "card" ? { type: "primary" } : {})}
+            />
+          </Button.Group>
+        </Col>
       </Row>
-
       <Row gutter={[16, 32]}>
-        {posts.map((post) => {
-          return (
-            <Col key={post.path} xs={24} sm={12} md={12} lg={8} xl={6}>
-              <div className="card">
-                <div className="card-image">
-                  <figure className="image is-4by3">
-                    <img src={post.cover} alt="DAW preview" />
-                  </figure>
-                </div>
-
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-content">
-                      <p className="title is-4">
-                        <Link to={post.path} key={post.title}>
-                          {post.title} {post.version}
-                        </Link>
-                      </p>
-
-                      <p className="subtitle is-6">
-                        <span style={{ color: "grey" }}>by {post.maker}</span>
-
-                        <br />
-                        <br />
-
-                        <span className="icon has-text-info">
-                          <i className="fas fa-tag" />
-                        </span>
-                        {post.price}
-                        <br />
-                        <span className="icon has-text-info">
-                          <i className="fas fa-music" />
-                        </span>
-                        {post.genre}
-                        <br />
-                        <span className="icon has-text-info">
-                          <i className="fas fa-microphone-alt" />
-                        </span>
-                        {post.useCase}
-                        <br />
-                        <span className="icon has-text-info">
-                          <i className="fas fa-desktop" />
-                        </span>
-                        {post.os && post.os.join(", ")}
-                        <br />
-                      </p>
-                    </div>
-                    <div className="media-right">
-                      <figure className="image is-48x48">
-                        <img src={post.logo} alt="DAW logo" />
+        {viewmode === "list" ? (
+          <Col xs={24}>
+            <Table
+              dataSource={mapThis}
+              columns={columns}
+              pagination={false}
+              bordered
+              style={{ width: "100%" }}
+            />
+          </Col>
+        ) : (
+          <>
+            {posts.map((post) => {
+              return (
+                <Col key={post.path} xs={24} sm={12} md={12} lg={8} xl={6}>
+                  <div className="card">
+                    <div className="card-image">
+                      <figure className="image is-4by3">
+                        <img src={post.cover} alt="DAW preview" />
                       </figure>
                     </div>
+
+                    <div className="card-content">
+                      <div className="media">
+                        <div className="media-content">
+                          <p className="title is-4">
+                            <Link to={post.path} key={post.title}>
+                              {post.title} {post.version}
+                            </Link>
+                          </p>
+
+                          <p className="subtitle is-6">
+                            <span style={{ color: "grey" }}>
+                              by {post.maker}
+                            </span>
+
+                            <br />
+                            <br />
+
+                            <span className="icon has-text-info">
+                              <i className="fas fa-tag" />
+                            </span>
+                            {post.price}
+                            <br />
+                            <span className="icon has-text-info">
+                              <i className="fas fa-music" />
+                            </span>
+                            {post.genre}
+                            <br />
+                            <span className="icon has-text-info">
+                              <i className="fas fa-microphone-alt" />
+                            </span>
+                            {post.useCase}
+                            <br />
+                            <span className="icon has-text-info">
+                              <i className="fas fa-desktop" />
+                            </span>
+                            {post.os && post.os.join(", ")}
+                            <br />
+                          </p>
+                        </div>
+                        <div className="media-right">
+                          <figure className="image is-48x48">
+                            <img src={post.logo} alt="DAW logo" />
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                    <footer className="card-footer">
+                      <a
+                        href={post.website}
+                        className="card-footer-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Website
+                      </a>
+                    </footer>
                   </div>
-
-                  <div className="content">{post.excerpt}</div>
-                </div>
-                <footer className="card-footer">
-                  <a
-                    href={post.website}
-                    className="card-footer-item"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Website
-                  </a>
-                </footer>
-              </div>
-            </Col>
-          );
-        })}
+                </Col>
+              );
+            })}
+          </>
+        )}
       </Row>
-
       <Row gutter={[16, 32]}>
         <Col span={24}>
-          {activeFiltering && filteredData.length === 0 ? (
+          {activeFiltering &&
+          filteredData.length === 0 &&
+          viewmode === "card" ? (
             <Result
               status="info"
               title="No DAWs found for this search term."
@@ -288,7 +366,7 @@ const DawCard = ({ postEdges }) => {
           ) : (
             <article className="message is-info">
               <div className="message-body">
-                Didn't find the DAW you were looking for? Write me on{" "}
+                Didn&#39;t find the DAW you were looking for? Write me on{" "}
                 <a
                   href="https://github.com/mhatvan"
                   target="_blank"

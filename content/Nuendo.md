@@ -1,19 +1,19 @@
 ---
-title: "Live"
-version: "10"
-maker: "Ableton"
-cover: "images/abletonlive.jpg"
-logo: "logos/abletonlive.png"
+title: "Nuendo"
+version: "10.2"
+maker: "Steinberg"
+cover: "images/nuendo.jpg"
+logo: "logos/nuendo.png"
 date: "2017-03-02"
-slug: "ableton"
-price: "$1199"
+slug: "nuendo"
+price: "$225"
 os:
   - Windows
   - macOS
 useCase: "all"
 genre: "Any genre"
-video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
-website: "https://www.ableton.com/en/"
+# video: "https://www.youtube.com/embed/9kZp25dSd0g"
+website: "https://new.steinberg.net/nuendo/"
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

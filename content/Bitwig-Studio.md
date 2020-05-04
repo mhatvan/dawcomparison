@@ -1,19 +1,20 @@
 ---
-title: "Live"
+title: "Bitwig Studio"
 version: "10"
-maker: "Ableton"
-cover: "images/abletonlive.jpg"
-logo: "logos/abletonlive.png"
+maker: "Bitwig"
+cover: "images/bitwig-studio.png"
+logo: "logos/bitwig-studio.png"
 date: "2017-03-02"
-slug: "ableton"
+slug: "bitwig"
 price: "$1199"
 os:
   - Windows
   - macOS
+  - Linux
 useCase: "all"
 genre: "Any genre"
-video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
-website: "https://www.ableton.com/en/"
+# video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
+website: "https://www.bitwig.com/en/home.html"
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

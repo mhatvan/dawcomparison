@@ -1,19 +1,19 @@
 ---
-title: "Live"
-version: "10"
-maker: "Ableton"
-cover: "images/abletonlive.jpg"
-logo: "logos/abletonlive.png"
+title: "Reason"
+version: "11"
+maker: "Propellerhead"
+cover: "images/reason.jpg"
+logo: "logos/reason.png"
 date: "2017-03-02"
-slug: "ableton"
-price: "$1199"
+slug: "reason"
+price: "$225"
 os:
   - Windows
   - macOS
 useCase: "all"
 genre: "Any genre"
-video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
-website: "https://www.ableton.com/en/"
+# video: "https://www.youtube.com/embed/9kZp25dSd0g"
+website: "https://www.reasonstudios.com/en/reason"
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

@@ -1,19 +1,19 @@
 ---
-title: "Live"
-version: "10"
-maker: "Ableton"
-cover: "images/abletonlive.jpg"
-logo: "logos/abletonlive.png"
+title: "Studio One"
+version: "4.6.1"
+maker: "PreSonus"
+cover: "images/studio-one.jpg"
+logo: "logos/studio-one.png"
 date: "2017-03-02"
-slug: "ableton"
-price: "$1199"
+slug: "studio-one"
+price: "$225"
 os:
   - Windows
   - macOS
 useCase: "all"
 genre: "Any genre"
-video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
-website: "https://www.ableton.com/en/"
+video: "https://www.youtube.com/embed/FiUpCTZ_Lk8"
+website: "https://www.presonus.com/products/Studio-One"
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

@@ -1,15 +1,11 @@
 ---
 title: "Pro Tools"
-maker: "Avid"
 version: "2020"
+maker: "Avid"
 cover: "images/protools.jpg"
 logo: "logos/protools.png"
-category: "random"
 date: "2017-03-02"
 slug: "pro-tools"
-tags:
-  - say hi
-usage: "TEST"
 price: "$1199"
 os:
   - Windows

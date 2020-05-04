@@ -1,19 +1,18 @@
 ---
-title: "Live"
-version: "10"
-maker: "Ableton"
-cover: "images/abletonlive.jpg"
-logo: "logos/abletonlive.png"
+title: "Cakewalk"
+version: "2020"
+maker: "BandLab"
+cover: "images/cakewalk.png"
+logo: "logos/cakewalk.gif"
 date: "2017-03-02"
-slug: "ableton"
-price: "$1199"
+slug: "cakewalk"
+price: "Free"
 os:
   - Windows
-  - macOS
 useCase: "all"
 genre: "Any genre"
-video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
-website: "https://www.ableton.com/en/"
+# video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
+website: "https://www.cakewalk.com/products/SONAR/"
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

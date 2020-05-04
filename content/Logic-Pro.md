@@ -4,12 +4,8 @@ version: "10"
 maker: "Apple"
 cover: "images/logicpro.png"
 logo: "logos/logicpro.png"
-category: "random"
 date: "2017-03-02"
 slug: "logic-pro"
-tags:
-  - say hi
-usage: "TEST"
 price: "$199.99"
 os:
   - macOS

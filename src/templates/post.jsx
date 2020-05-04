@@ -17,8 +17,6 @@ export default class PostTemplate extends React.Component {
       post.id = slug;
     }
 
-    console.log(234, post);
-
     return (
       <Layout>
         <Helmet>
@@ -85,7 +83,6 @@ export default class PostTemplate extends React.Component {
                 </div>
               </div>
 
-              {/* <div className="content">{post.excerpt}</div> */}
               <div className="content">
                 <article className="message">
                   <div className="message-header">
@@ -145,7 +142,6 @@ export default class PostTemplate extends React.Component {
 
           {/* <div dangerouslySetInnerHTML={{ __html: postNode.html }} /> */}
           {/* <div className="post-meta">
-            <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div> */}
           {/* <Disqus postNode={postNode} /> */}
@@ -167,8 +163,6 @@ export const pageQuery = graphql`
         title
         cover
         date
-        category
-        tags
         video
         price
         os

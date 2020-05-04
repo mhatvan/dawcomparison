@@ -4,12 +4,8 @@ version: "10.5"
 maker: "Steinberg"
 cover: "images/cubase.png"
 logo: "logos/cubase.png"
-category: "random"
 date: "2017-03-02"
 slug: "cubase"
-tags:
-  - say hi
-test: "TEST"
 price: "$599"
 os:
   - Windows
