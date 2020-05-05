@@ -49,6 +49,14 @@ const Navbar = () => {
           className={`navbar-menu ${burgerMenuActive}`}
         >
           <div className="navbar-end">
+            <Link to="/what-is-daw" className="navbar-item">
+              <strong>What is a DAW?</strong>
+            </Link>
+
+            <Link to="/vst-comparison" className="navbar-item">
+              <strong>VST Comparison</strong>
+            </Link>
+
             <Link to="/about" className="navbar-item">
               <strong>About</strong>
             </Link>

@@ -4,17 +4,27 @@ version: "2.3.3"
 maker: "Audacity"
 cover: "images/audacity.png"
 logo: "logos/audacity.svg"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "audacity"
 price: "Free"
 os:
   - Windows
   - macOS
   - Linux
-useCase: "all"
+useCase:
+  - Recording
 genre: "Any genre"
 video: "https://www.youtube.com/embed/LQ7n9pA0qc0"
 website: "https://www.audacityteam.org/"
+pros:
+  - Free tool for recording audio
+cons:
+  - Not really useful for music production
+plugin:
+  - VST
+interface:
+  - Core Audio
+  - WDM
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

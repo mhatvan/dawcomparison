@@ -4,16 +4,29 @@ version: "11"
 maker: "Propellerhead"
 cover: "images/reason.jpg"
 logo: "logos/reason.png"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "reason"
 price: "$225"
 os:
   - Windows
   - macOS
-useCase: "all"
+useCase:
+  - Songwriting
+  - Recording
+  - Mixing / Editing
 genre: "Any genre"
-# video: "https://www.youtube.com/embed/9kZp25dSd0g"
+video: "https://www.youtube.com/embed/tMh3ZEFyEmo"
 website: "https://www.reasonstudios.com/en/reason"
+pros:
+  - a
+  - b
+cons:
+  - c
+plugin:
+  - N/A
+interface:
+  - WDM
+  - Core Audio
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

@@ -67,6 +67,10 @@ exports.createPages = async ({ graphql, actions }) => {
               maker
               version
               website
+              pros
+              cons
+              plugin
+              interface
             }
           }
         }

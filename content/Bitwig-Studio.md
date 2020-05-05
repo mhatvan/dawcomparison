@@ -1,20 +1,33 @@
 ---
 title: "Bitwig Studio"
-version: "10"
+version: "3.2"
 maker: "Bitwig"
 cover: "images/bitwig-studio.png"
 logo: "logos/bitwig-studio.png"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "bitwig"
-price: "$1199"
+price: "$410"
 os:
   - Windows
   - macOS
   - Linux
-useCase: "all"
+useCase:
+  - Songwriting
+  - Recording
+  - Mixing / Editing
 genre: "Any genre"
-# video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
+video: "https://www.youtube.com/embed/Nfv5Lvi9w-w"
 website: "https://www.bitwig.com/en/home.html"
+pros:
+  - a
+  - b
+cons:
+  - c
+plugin:
+  - VST
+interface:
+  - ASIO
+  - Core Audio
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

@@ -22,7 +22,18 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet-async",
     "gatsby-plugin-lodash",
-    "gatsby-plugin-antd",
+    {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-less",
+      options: {
+        javascriptEnabled: true,
+      },
+    },
     {
       resolve: "gatsby-plugin-import",
       options: {

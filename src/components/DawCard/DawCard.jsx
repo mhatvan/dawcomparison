@@ -3,16 +3,9 @@ import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { flatten } from "lodash";
 import { OutboundLink } from "gatsby-plugin-gtag";
-import {
-  Button,
-  Col,
-  Input,
-  Result,
-  Row,
-  Select,
-  Slider,
-  Table,
-} from "../../../node_modules/antd/lib/index";
+import { Button, Col, Input, Result, Row, Select, Slider, Tag } from "antd";
+import { DAWCardDetails } from "./DawCardDetails";
+import { DawTable } from "./DawTable";
 
 const initialState = {
   filteredData: [],
@@ -44,6 +37,8 @@ const DawCard = ({ postEdges }) => {
       logo: node.frontmatter.logo,
       version: node.frontmatter.version,
       website: node.frontmatter.website,
+      plugin: node.frontmatter.plugin,
+      interface: node.frontmatter.interface,
     }));
   };
 
@@ -74,6 +69,26 @@ const DawCard = ({ postEdges }) => {
 
     const filteredData = postList.filter((post) => {
       return post.os.includes(value);
+    });
+
+    return setState({
+      ...state,
+      filteredData,
+      filterActive: true,
+    });
+  };
+
+  const handleUseCaseFilter = (value) => {
+    if (!value) {
+      return setState({
+        ...state,
+        filteredData: postList,
+        filterActive: false,
+      });
+    }
+
+    const filteredData = postList.filter((post) => {
+      return post.useCase.includes(value);
     });
 
     return setState({
@@ -122,9 +137,15 @@ const DawCard = ({ postEdges }) => {
   const uniqueMakers = postList
     .map((post) => post.maker)
     .filter((os, idx, arr) => arr.indexOf(os) === idx);
+
   const allOS = postList.map((post) => post.os);
   const uniqueOS = flatten(allOS).filter(
     (os, idx, arr) => arr.indexOf(os) === idx
+  );
+
+  const allUseCases = postList.map((post) => post.useCase);
+  const uniqueUseCases = flatten(allUseCases).filter(
+    (useCase, idx, arr) => arr.indexOf(useCase) === idx
   );
 
   const { filteredData, query, filterActive, viewmode } = state;
@@ -140,63 +161,6 @@ const DawCard = ({ postEdges }) => {
     1500: "$1500",
     2000: "$2000",
   };
-
-  const mapThis = posts.map((post) => {
-    return {
-      key: post.path,
-      title: `${post.title} ${post.version}`,
-      maker: post.maker,
-      os: post.os.join(", "),
-      price: post.price,
-      website: post.website,
-    };
-  });
-
-  const columns = [
-    {
-      title: "Title",
-      dataIndex: "title",
-      key: "title",
-      sorter: (a, b) => {
-        return a.title.localeCompare(b.title);
-      },
-    },
-    {
-      title: "Maker",
-      dataIndex: "maker",
-      key: "maker",
-      sorter: (a, b) => {
-        return a.maker.localeCompare(b.maker);
-      },
-    },
-    {
-      title: "OS",
-      dataIndex: "os",
-      key: "os",
-    },
-    {
-      title: "Price",
-      dataIndex: "price",
-      key: "price",
-      defaultSortOrder: "ascend",
-      sorter: (a, b) => {
-        const priceA = a.price === "Free" ? 0 : +a.price.replace("$", "");
-        const priceB = b.price === "Free" ? 0 : +b.price.replace("$", "");
-
-        return priceA - priceB;
-      },
-    },
-    {
-      title: "Website",
-      dataIndex: "website",
-      key: "website",
-      render: (text) => (
-        <OutboundLink href={text} target="_blank" rel="noopener noreferrer">
-          {text}
-        </OutboundLink>
-      ),
-    },
-  ];
 
   const changeViewMode = (mode) => {
     setState({ ...state, viewmode: mode });
@@ -231,7 +195,24 @@ const DawCard = ({ postEdges }) => {
             })}
           </Select>
         </Col>
-        <Col xs={24} sm={8} md={4} lg={4} xl={4}>
+        <Col xs={24} sm={4} md={2} lg={2} xl={2}>
+          <Select
+            allowClear
+            placeholder="Use case"
+            optionFilterProp="children"
+            onChange={handleUseCaseFilter}
+            style={{ width: "100%" }}
+          >
+            {uniqueUseCases.map((useCase) => {
+              return (
+                <Select.Option key={useCase} value={useCase}>
+                  {useCase}
+                </Select.Option>
+              );
+            })}
+          </Select>
+        </Col>
+        <Col xs={24} sm={4} md={2} lg={2} xl={2}>
           <Select
             allowClear
             placeholder="OS"
@@ -261,21 +242,27 @@ const DawCard = ({ postEdges }) => {
           />
         </Col>
       </Row>
-      <Row gutter={[16, 16]} align="bottom">
+      <Row gutter={[16, 16]} align="middle">
         <Col xs={12}>
-          {activeFiltering ? filteredData.length : postList.length} out of{" "}
-          {postList.length} DAWs
+          <Tag color="blue">
+            Displaying{" "}
+            <b>{activeFiltering ? filteredData.length : postList.length} </b>
+            out of {postList.length} DAWs
+          </Tag>
         </Col>
+
         <Col xs={12} style={{ textAlign: "right" }}>
           <Button.Group>
             <Button
               onClick={() => changeViewMode("list")}
               icon={<UnorderedListOutlined />}
+              title="List view"
               {...(viewmode === "list" ? { type: "primary" } : {})}
             />
             <Button
               onClick={() => changeViewMode("card")}
               icon={<LayoutOutlined />}
+              title="Card view"
               {...(viewmode === "card" ? { type: "primary" } : {})}
             />
           </Button.Group>
@@ -284,19 +271,21 @@ const DawCard = ({ postEdges }) => {
       <Row gutter={[16, 32]}>
         {viewmode === "list" ? (
           <Col xs={24}>
-            <Table
-              dataSource={mapThis}
-              columns={columns}
-              pagination={false}
-              bordered
-              style={{ width: "100%" }}
-            />
+            <DawTable posts={posts} />
           </Col>
         ) : (
           <>
             {posts.map((post) => {
               return (
-                <Col key={post.path} xs={24} sm={12} md={12} lg={8} xl={6}>
+                <Col
+                  key={post.path}
+                  xs={24}
+                  sm={24}
+                  md={12}
+                  lg={12}
+                  xl={8}
+                  xxl={6}
+                >
                   <div className="card">
                     <div className="card-image">
                       <figure className="image is-4by3">
@@ -313,35 +302,7 @@ const DawCard = ({ postEdges }) => {
                             </Link>
                           </p>
 
-                          <p className="subtitle is-6">
-                            <span style={{ color: "grey" }}>
-                              by {post.maker}
-                            </span>
-
-                            <br />
-                            <br />
-
-                            <span className="icon has-text-info">
-                              <i className="fas fa-tag" />
-                            </span>
-                            {post.price}
-                            <br />
-                            <span className="icon has-text-info">
-                              <i className="fas fa-music" />
-                            </span>
-                            {post.genre}
-                            <br />
-                            <span className="icon has-text-info">
-                              <i className="fas fa-microphone-alt" />
-                            </span>
-                            {post.useCase}
-                            <br />
-                            <span className="icon has-text-info">
-                              <i className="fas fa-desktop" />
-                            </span>
-                            {post.os && post.os.join(", ")}
-                            <br />
-                          </p>
+                          <DAWCardDetails post={post} />
                         </div>
                         <div className="media-right">
                           <figure className="image is-48x48">
@@ -378,23 +339,31 @@ const DawCard = ({ postEdges }) => {
               subTitle="Try another search!"
             />
           ) : (
-            <article className="message is-info">
-              <div className="message-body">
-                Didn&#39;t find the DAW you were looking for? Write me on{" "}
-                <OutboundLink
-                  href="https://github.com/mhatvan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </OutboundLink>{" "}
-                or{" "}
-                <OutboundLink href="mailto:markus_hatvan@aon.at">
-                  Email
-                </OutboundLink>{" "}
-                to include it.
-              </div>
-            </article>
+            <>
+              <article className="message is-info">
+                <div className="message-body">
+                  Note that all prices listed above are estimated and can be
+                  deviating due to currency differences or active discounts.
+                </div>
+              </article>
+              <article className="message is-info">
+                <div className="message-body">
+                  Didn&#39;t find the DAW you were looking for? Write me on{" "}
+                  <OutboundLink
+                    href="https://github.com/mhatvan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </OutboundLink>{" "}
+                  or{" "}
+                  <OutboundLink href="mailto:markus_hatvan@aon.at">
+                    Email
+                  </OutboundLink>{" "}
+                  to include it.
+                </div>
+              </article>
+            </>
           )}
         </Col>
       </Row>

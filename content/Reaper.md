@@ -4,16 +4,31 @@ version: "6.09"
 maker: "Cockos"
 cover: "images/reaper.jpg"
 logo: "logos/reaper.png"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "reaper"
 price: "$225"
 os:
   - Windows
   - macOS
-useCase: "all"
+useCase:
+  - Songwriting
+  - Recording
+  - Mixing / Editing
 genre: "Any genre"
-# video: "https://www.youtube.com/embed/9kZp25dSd0g"
+video: "https://www.youtube.com/embed/kn2SlBMpzwY"
 website: "https://www.reaper.fm/"
+pros:
+  - a
+  - b
+cons:
+  - c
+plugin:
+  - VST
+  - JS
+  - DX
+interface:
+  - ASIO
+  - Core Audio
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

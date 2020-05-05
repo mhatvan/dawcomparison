@@ -4,15 +4,29 @@ version: "2020"
 maker: "BandLab"
 cover: "images/cakewalk.png"
 logo: "logos/cakewalk.gif"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "cakewalk"
 price: "Free"
 os:
   - Windows
-useCase: "all"
+useCase:
+  - Songwriting
+  - Recording
+  - Mixing / Editing
 genre: "Any genre"
-# video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
+video: "https://www.youtube.com/embed/8PVxIqeDZ7U"
 website: "https://www.cakewalk.com/products/SONAR/"
+pros:
+  - a
+  - b
+cons:
+  - c
+plugin:
+  - VST
+  - DX
+interface:
+  - ASIO
+  - WDM
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Typography } from "../../../node_modules/antd/lib/index";
+import { Typography } from "antd";
 
 import "./About.css";
 

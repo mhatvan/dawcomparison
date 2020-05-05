@@ -4,16 +4,31 @@ version: "10.2"
 maker: "Steinberg"
 cover: "images/nuendo.jpg"
 logo: "logos/nuendo.png"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "nuendo"
-price: "$225"
+price: "$1100"
 os:
   - Windows
   - macOS
-useCase: "all"
+useCase:
+  - Audio post-production
+  - Game audio
+  - Songwriting
+  - Recording
+  - Mixing / Editing
 genre: "Any genre"
-# video: "https://www.youtube.com/embed/9kZp25dSd0g"
+video: "https://www.youtube.com/embed/GG-ceH6fLw4"
 website: "https://new.steinberg.net/nuendo/"
+pros:
+  - a
+  - b
+cons:
+  - c
+plugin:
+  - VST
+interface:
+  - ASIO
+  - Core Audio
 ---
 
 # Industry standard DAW running on DSP cards for greater power and stability

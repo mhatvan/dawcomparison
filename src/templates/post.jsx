@@ -6,6 +6,7 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+import { DAWCardDetails } from "../components/DawCard/DawCardDetails";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -20,7 +21,7 @@ export default class PostTemplate extends React.Component {
     return (
       <Layout>
         <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <title>{`${post.maker} ${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="container">
@@ -30,8 +31,6 @@ export default class PostTemplate extends React.Component {
                 <iframe
                   title="DAW Video"
                   className="has-ratio"
-                  width="640"
-                  height="360"
                   src={post.video}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -46,33 +45,7 @@ export default class PostTemplate extends React.Component {
                     {post.title} {post.version}
                   </p>
 
-                  <p className="subtitle is-6">
-                    <span style={{ color: "grey" }}>by {post.maker}</span>
-
-                    <br />
-                    <br />
-
-                    <span className="icon has-text-info">
-                      <i className="fas fa-tag" />
-                    </span>
-                    {post.price}
-                    <br />
-                    <span className="icon has-text-info">
-                      <i className="fas fa-music" />
-                    </span>
-                    {post.genre}
-                    <br />
-                    <span className="icon has-text-info">
-                      <i className="fas fa-microphone-alt" />
-                    </span>
-                    {post.useCase}
-                    <br />
-                    <span className="icon has-text-info">
-                      <i className="fas fa-desktop" />
-                    </span>
-                    {post.os && post.os.join(", ")}
-                    <br />
-                  </p>
+                  <DAWCardDetails post={post} />
                 </div>
                 <div className="media-right">
                   <figure className="image is-48x48">
@@ -83,8 +56,6 @@ export default class PostTemplate extends React.Component {
 
               <div className="content">
                 <hr />
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-                <br />
                 <article className="message">
                   <div className="message-header">
                     <p>Pros & Cons</p>
@@ -92,41 +63,39 @@ export default class PostTemplate extends React.Component {
                   <div className="message-body">
                     <div className="columns is-multiline">
                       <div className="column">
-                        <span className="icon has-text-success">
-                          <i className="fas fa-plus-circle" />
-                        </span>
-                        Lifetime free updates
-                        <br />
-                        <span className="icon has-text-success">
-                          <i className="fas fa-plus-circle" />
-                        </span>
-                        Lifetime free updates
-                        <br />
-                        <span className="icon has-text-success">
-                          <i className="fas fa-plus-circle" />
-                        </span>
-                        Lifetime free updates
+                        {post.pros &&
+                          post.pros.map((pro) => {
+                            return (
+                              <div key={pro}>
+                                <span className="icon has-text-success">
+                                  <i className="fas fa-plus-circle" />
+                                </span>
+                                {pro}
+                                <br />
+                              </div>
+                            );
+                          })}
                       </div>
+
                       <div className="column">
-                        <span className="icon has-text-danger">
-                          <i className="fas fa-minus-circle" />
-                        </span>
-                        Recording
-                        <br />
-                        <span className="icon has-text-danger">
-                          <i className="fas fa-minus-circle" />
-                        </span>
-                        Recording
-                        <br />
-                        <span className="icon has-text-danger">
-                          <i className="fas fa-minus-circle" />
-                        </span>
-                        Recording
-                        <br />
+                        {post.cons &&
+                          post.cons.map((con) => {
+                            return (
+                              <div key={con}>
+                                <span className="icon has-text-danger">
+                                  <i className="fas fa-minus-circle" />
+                                </span>
+                                {con}
+                                <br />
+                              </div>
+                            );
+                          })}
                       </div>
                     </div>
                   </div>
                 </article>
+                <br />
+                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
               </div>
             </div>
             <footer className="card-footer">
@@ -172,6 +141,10 @@ export const pageQuery = graphql`
         logo
         version
         website
+        pros
+        cons
+        plugin
+        interface
       }
       fields {
         slug

@@ -1,19 +1,32 @@
 ---
-title: "Cubase"
+title: "Cubase Pro"
 version: "10.5"
 maker: "Steinberg"
 cover: "images/cubase.png"
 logo: "logos/cubase.png"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "cubase"
 price: "$599"
 os:
   - Windows
   - macOS
-useCase: "all"
+useCase:
+  - Songwriting
+  - Recording
+  - Mixing / Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/lSZ8yX1viV8"
 website: "https://www.steinberg.net/en/home.html"
+pros:
+  - a
+  - b
+cons:
+  - c
+plugin:
+  - VST
+interface:
+  - ASIO
+  - Core Audio
 ---
 
 # Cubase has been around for a long time and remains popular to this day. It’s innovative, trustworthy and stable

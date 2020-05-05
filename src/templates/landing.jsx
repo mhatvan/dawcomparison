@@ -46,6 +46,8 @@ export const pageQuery = graphql`
             logo
             version
             website
+            plugin
+            interface
           }
         }
       }

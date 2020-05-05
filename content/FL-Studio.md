@@ -4,15 +4,26 @@ version: "20"
 maker: "Image-Line"
 cover: "images/flstudio.jpg"
 logo: "logos/flstudio.jpg"
-date: "2017-03-02"
+date: "2020-05-05"
 slug: "fl-studio"
 price: "$599"
 os:
   - Windows
-useCase: "all"
-genre: "Any genre"
+useCase:
+  - Songwriting
+  - Mixing / Editing
+genre: "EDM"
 video: "https://www.youtube.com/embed/AuqqiuaLYJA"
 website: "https://www.image-line.com/flstudio/"
+pros:
+  - a
+  - b
+cons:
+  - c
+plugin:
+  - VST
+interface:
+  - ASIO
 ---
 
 # NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents
