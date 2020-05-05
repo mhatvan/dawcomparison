@@ -2,4 +2,4 @@ User-agent: *
 Disallow: */tags/
 Disallow: */categories/
 
-sitemap: https://dawcomparison.netlify.com/sitemap.xml
+sitemap: https://dawcomparison.netlify.app/sitemap.xml

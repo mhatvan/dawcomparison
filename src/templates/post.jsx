@@ -1,6 +1,6 @@
 import React from "react";
-import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { Helmet } from "react-helmet-async";
+import { graphql } from "gatsby";
 import Layout from "../layout";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
@@ -43,9 +43,7 @@ export default class PostTemplate extends React.Component {
               <div className="media">
                 <div className="media-content">
                   <p className="title is-4">
-                    <Link to={post.path} key={post.title}>
-                      {post.title} {post.version}
-                    </Link>
+                    {post.title} {post.version}
                   </p>
 
                   <p className="subtitle is-6">
@@ -84,6 +82,9 @@ export default class PostTemplate extends React.Component {
               </div>
 
               <div className="content">
+                <hr />
+                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                <br />
                 <article className="message">
                   <div className="message-header">
                     <p>Pros & Cons</p>
@@ -140,7 +141,6 @@ export default class PostTemplate extends React.Component {
             </footer>
           </div>
 
-          {/* <div dangerouslySetInnerHTML={{ __html: postNode.html }} /> */}
           {/* <div className="post-meta">
             <SocialLinks postPath={slug} postNode={postNode} />
           </div> */}

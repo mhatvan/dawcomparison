@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { OutboundLink } from "gatsby-plugin-gtag";
 import "./UserLinks.css";
 
 class UserLinks extends Component {
@@ -6,7 +7,7 @@ class UserLinks extends Component {
     return (
       <div className="user-links">
         <p className="buttons">
-          <a
+          <OutboundLink
             href="https://github.com/mhatvan"
             target="_blank"
             rel="noopener noreferrer"
@@ -16,13 +17,16 @@ class UserLinks extends Component {
               <i className="fab fa-github" />
             </span>
             <span>GitHub</span>
-          </a>
-          <a href="mailto:markus_hatvan@aon.at" className="button is-link">
+          </OutboundLink>
+          <OutboundLink
+            href="mailto:markus_hatvan@aon.at"
+            className="button is-link"
+          >
             <span className="icon">
               <i className="fas fa-envelope" />
             </span>
             <span>Email</span>
-          </a>
+          </OutboundLink>
         </p>
       </div>
     );

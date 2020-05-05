@@ -1,6 +1,8 @@
 import { LayoutOutlined, UnorderedListOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { flatten } from "lodash";
+import { OutboundLink } from "gatsby-plugin-gtag";
 import {
   Button,
   Col,
@@ -16,11 +18,18 @@ const initialState = {
   filteredData: [],
   filterActive: false,
   query: "",
-  viewmode: "card",
+  viewmode: null,
 };
 
 const DawCard = ({ postEdges }) => {
   const [state, setState] = useState(initialState);
+
+  useEffect(() => {
+    setState({
+      ...state,
+      viewmode: localStorage.getItem("viewmode") || "card",
+    });
+  }, []);
 
   const getPostList = () => {
     return (postEdges || []).map(({ node }) => ({
@@ -114,9 +123,9 @@ const DawCard = ({ postEdges }) => {
     .map((post) => post.maker)
     .filter((os, idx, arr) => arr.indexOf(os) === idx);
   const allOS = postList.map((post) => post.os);
-  const uniqueOS = allOS
-    .flat()
-    .filter((os, idx, arr) => arr.indexOf(os) === idx);
+  const uniqueOS = flatten(allOS).filter(
+    (os, idx, arr) => arr.indexOf(os) === idx
+  );
 
   const { filteredData, query, filterActive, viewmode } = state;
 
@@ -182,12 +191,17 @@ const DawCard = ({ postEdges }) => {
       dataIndex: "website",
       key: "website",
       render: (text) => (
-        <a href={text} target="_blank" rel="noopener noreferrer">
+        <OutboundLink href={text} target="_blank" rel="noopener noreferrer">
           {text}
-        </a>
+        </OutboundLink>
       ),
     },
   ];
+
+  const changeViewMode = (mode) => {
+    setState({ ...state, viewmode: mode });
+    localStorage.setItem("viewmode", mode);
+  };
 
   return (
     <div className="container">
@@ -255,12 +269,12 @@ const DawCard = ({ postEdges }) => {
         <Col xs={12} style={{ textAlign: "right" }}>
           <Button.Group>
             <Button
-              onClick={() => setState({ ...state, viewmode: "list" })}
+              onClick={() => changeViewMode("list")}
               icon={<UnorderedListOutlined />}
               {...(viewmode === "list" ? { type: "primary" } : {})}
             />
             <Button
-              onClick={() => setState({ ...state, viewmode: "card" })}
+              onClick={() => changeViewMode("card")}
               icon={<LayoutOutlined />}
               {...(viewmode === "card" ? { type: "primary" } : {})}
             />
@@ -337,14 +351,14 @@ const DawCard = ({ postEdges }) => {
                       </div>
                     </div>
                     <footer className="card-footer">
-                      <a
+                      <OutboundLink
                         href={post.website}
                         className="card-footer-item"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         Website
-                      </a>
+                      </OutboundLink>
                     </footer>
                   </div>
                 </Col>
@@ -367,15 +381,18 @@ const DawCard = ({ postEdges }) => {
             <article className="message is-info">
               <div className="message-body">
                 Didn&#39;t find the DAW you were looking for? Write me on{" "}
-                <a
+                <OutboundLink
                   href="https://github.com/mhatvan"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   GitHub
-                </a>{" "}
-                or <a href="mailto:markus_hatvan@aon.at">Email</a> to include
-                it.
+                </OutboundLink>{" "}
+                or{" "}
+                <OutboundLink href="mailto:markus_hatvan@aon.at">
+                  Email
+                </OutboundLink>{" "}
+                to include it.
               </div>
             </article>
           )}

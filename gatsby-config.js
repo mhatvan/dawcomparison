@@ -20,7 +20,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-react-helmet-async",
     "gatsby-plugin-lodash",
     "gatsby-plugin-antd",
     {
@@ -67,9 +67,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-gtag",
       options: {
         trackingId: config.googleAnalyticsID,
+        anonymize: true,
+        respectDNT: true,
+        defer: true,
       },
     },
     {
