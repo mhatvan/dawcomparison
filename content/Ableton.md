@@ -2,8 +2,8 @@
 title: "Live Suite"
 version: "10"
 maker: "Ableton"
-cover: "images/abletonlive.jpg"
-logo: "logos/abletonlive.png"
+cover: "/images/abletonlive.jpg"
+logo: "/logos/abletonlive.png"
 date: "2020-05-05"
 slug: "ableton"
 price: "$650"
@@ -13,7 +13,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "EDM"
 video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
 website: "https://www.ableton.com/en/"

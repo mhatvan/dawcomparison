@@ -169,15 +169,16 @@ const DawCard = ({ postEdges }) => {
 
   return (
     <div className="container">
-      <Row gutter={[16, 16]} align="middle">
-        <Col xs={24} sm={24} md={10} lg={10} xl={6} xxl={6}>
+      {/* <Affix offsetTop={4}> */}
+      <Row gutter={[16, 8]} align="middle">
+        <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <Input
             placeholder="Search for your favorite DAW"
             onChange={handleSearch}
             allowClear
           />
         </Col>
-        <Col xs={24} sm={16} md={10} lg={10} xl={6} xxl={6}>
+        <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <Select
             allowClear
             mode="multiple"
@@ -195,7 +196,7 @@ const DawCard = ({ postEdges }) => {
             })}
           </Select>
         </Col>
-        <Col xs={24} sm={4} md={2} lg={2} xl={2}>
+        <Col xs={24} sm={12} md={12} lg={12} xl={8}>
           <Select
             allowClear
             placeholder="Use case"
@@ -212,7 +213,7 @@ const DawCard = ({ postEdges }) => {
             })}
           </Select>
         </Col>
-        <Col xs={24} sm={4} md={2} lg={2} xl={2}>
+        <Col xs={24} sm={12} md={12} lg={12} xl={4}>
           <Select
             allowClear
             placeholder="OS"
@@ -229,7 +230,13 @@ const DawCard = ({ postEdges }) => {
             })}
           </Select>
         </Col>
-        <Col xs={24} xl={{ span: 6, offset: 1 }} xxl={{ span: 6, offset: 1 }}>
+        <Col
+          xs={{ span: 22, offset: 1 }}
+          sm={{ span: 22, offset: 1 }}
+          md={{ span: 22, offset: 1 }}
+          xl={{ span: 10, offset: 1 }}
+          xxl={{ span: 10, offset: 1 }}
+        >
           <Slider
             tipFormatter={(value) => `$${value}`}
             range
@@ -254,20 +261,21 @@ const DawCard = ({ postEdges }) => {
         <Col xs={12} style={{ textAlign: "right" }}>
           <Button.Group>
             <Button
-              onClick={() => changeViewMode("list")}
-              icon={<UnorderedListOutlined />}
-              title="List view"
-              {...(viewmode === "list" ? { type: "primary" } : {})}
-            />
-            <Button
               onClick={() => changeViewMode("card")}
               icon={<LayoutOutlined />}
               title="Card view"
               {...(viewmode === "card" ? { type: "primary" } : {})}
             />
+            <Button
+              onClick={() => changeViewMode("list")}
+              icon={<UnorderedListOutlined />}
+              title="List view"
+              {...(viewmode === "list" ? { type: "primary" } : {})}
+            />
           </Button.Group>
         </Col>
       </Row>
+      {/* </Affix> */}
       <Row gutter={[16, 32]}>
         {viewmode === "list" ? (
           <Col xs={24}>

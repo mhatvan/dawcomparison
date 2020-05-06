@@ -2,8 +2,8 @@
 title: "Reason"
 version: "11"
 maker: "Propellerhead"
-cover: "images/reason.jpg"
-logo: "logos/reason.png"
+cover: "/images/reason.jpg"
+logo: "/logos/reason.png"
 date: "2020-05-05"
 slug: "reason"
 price: "$225"
@@ -13,7 +13,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/tMh3ZEFyEmo"
 website: "https://www.reasonstudios.com/en/reason"

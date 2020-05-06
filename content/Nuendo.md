@@ -2,8 +2,8 @@
 title: "Nuendo"
 version: "10.2"
 maker: "Steinberg"
-cover: "images/nuendo.jpg"
-logo: "logos/nuendo.png"
+cover: "/images/nuendo.jpg"
+logo: "/logos/nuendo.png"
 date: "2020-05-05"
 slug: "nuendo"
 price: "$1100"
@@ -11,11 +11,12 @@ os:
   - Windows
   - macOS
 useCase:
-  - Audio post-production
+  - Post-production
   - Game audio
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/GG-ceH6fLw4"
 website: "https://new.steinberg.net/nuendo/"

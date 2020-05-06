@@ -2,8 +2,8 @@
 title: "Reaper"
 version: "6.09"
 maker: "Cockos"
-cover: "images/reaper.jpg"
-logo: "logos/reaper.png"
+cover: "/images/reaper.jpg"
+logo: "/logos/reaper.png"
 date: "2020-05-05"
 slug: "reaper"
 price: "$225"
@@ -13,7 +13,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/kn2SlBMpzwY"
 website: "https://www.reaper.fm/"

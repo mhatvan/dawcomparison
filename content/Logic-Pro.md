@@ -2,8 +2,8 @@
 title: "Logic Pro"
 version: "10"
 maker: "Apple"
-cover: "images/logicpro.png"
-logo: "logos/logicpro.png"
+cover: "/images/logicpro.png"
+logo: "/logos/logicpro.png"
 date: "2020-05-05"
 slug: "logic-pro"
 price: "$199.99"
@@ -12,7 +12,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/jjnBjZ9lbp8"
 website: "https://www.apple.com/logic-pro"

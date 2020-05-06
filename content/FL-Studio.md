@@ -2,8 +2,8 @@
 title: "FL Studio"
 version: "20"
 maker: "Image-Line"
-cover: "images/flstudio.jpg"
-logo: "logos/flstudio.jpg"
+cover: "/images/flstudio.jpg"
+logo: "/logos/flstudio.jpg"
 date: "2020-05-05"
 slug: "fl-studio"
 price: "$599"
@@ -11,7 +11,8 @@ os:
   - Windows
 useCase:
   - Songwriting
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "EDM"
 video: "https://www.youtube.com/embed/AuqqiuaLYJA"
 website: "https://www.image-line.com/flstudio/"

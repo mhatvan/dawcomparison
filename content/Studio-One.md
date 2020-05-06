@@ -2,8 +2,8 @@
 title: "Studio One"
 version: "4.6.1"
 maker: "PreSonus"
-cover: "images/studio-one.jpg"
-logo: "logos/studio-one.png"
+cover: "/images/studio-one.jpg"
+logo: "/logos/studio-one.png"
 date: "2020-05-05"
 slug: "studio-one"
 price: "$225"
@@ -13,7 +13,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "EDM"
 video: "https://www.youtube.com/embed/FiUpCTZ_Lk8"
 website: "https://www.presonus.com/products/Studio-One"

@@ -2,8 +2,8 @@
 title: "Bitwig Studio"
 version: "3.2"
 maker: "Bitwig"
-cover: "images/bitwig-studio.png"
-logo: "logos/bitwig-studio.png"
+cover: "/images/bitwig-studio.png"
+logo: "/logos/bitwig-studio.png"
 date: "2020-05-05"
 slug: "bitwig"
 price: "$410"
@@ -14,7 +14,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/Nfv5Lvi9w-w"
 website: "https://www.bitwig.com/en/home.html"

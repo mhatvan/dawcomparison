@@ -1,8 +1,9 @@
 .footer {
   justify-content: center;
-  align-content: center;
-  background: white;
-  border-top: 3px solid black;
+  align-items: center;
+  background: #1890ff !important;
+  border-top: 4px solid #3b58bf8f;
+  color: white;
   padding: 20px !important;
   width: 100%;
 }
@@ -12,6 +13,12 @@
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.notice-container span,
+.notice-container .white {
+  color: white;
 }
 
 @media (max-width: 700px) {

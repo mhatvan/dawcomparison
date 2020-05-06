@@ -2,8 +2,8 @@
 title: "Cakewalk"
 version: "2020"
 maker: "BandLab"
-cover: "images/cakewalk.png"
-logo: "logos/cakewalk.gif"
+cover: "/images/cakewalk.png"
+logo: "/logos/cakewalk.gif"
 date: "2020-05-05"
 slug: "cakewalk"
 price: "Free"
@@ -12,7 +12,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/8PVxIqeDZ7U"
 website: "https://www.cakewalk.com/products/SONAR/"

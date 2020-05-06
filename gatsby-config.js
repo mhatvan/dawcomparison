@@ -23,6 +23,13 @@ module.exports = {
     "gatsby-plugin-react-helmet-async",
     "gatsby-plugin-lodash",
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto:700`, `Open Sans:600`],
+        display: "swap",
+      },
+    },
+    {
       resolve: "gatsby-plugin-antd",
       options: {
         style: true,

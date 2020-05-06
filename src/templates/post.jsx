@@ -1,12 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { graphql } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-gtag";
 import Layout from "../layout";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 import { DAWCardDetails } from "../components/DawCard/DawCardDetails";
+import SocialLinks from "../components/SocialLinks/SocialLinks";
+import Disqus from "../components/Disqus/Disqus";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -21,7 +24,7 @@ export default class PostTemplate extends React.Component {
     return (
       <Layout>
         <Helmet>
-          <title>{`${post.maker} ${post.title} | ${config.siteTitle}`}</title>
+          <title>{`${post.maker} ${post.version} by ${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="container">
@@ -42,7 +45,13 @@ export default class PostTemplate extends React.Component {
               <div className="media">
                 <div className="media-content">
                   <p className="title is-4">
-                    {post.title} {post.version}
+                    <OutboundLink
+                      href={post.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {post.title} {post.version}
+                    </OutboundLink>
                   </p>
 
                   <DAWCardDetails post={post} />
@@ -55,7 +64,6 @@ export default class PostTemplate extends React.Component {
               </div>
 
               <div className="content">
-                <hr />
                 <article className="message">
                   <div className="message-header">
                     <p>Pros & Cons</p>
@@ -99,22 +107,11 @@ export default class PostTemplate extends React.Component {
               </div>
             </div>
             <footer className="card-footer">
-              <a
-                href={post.website}
-                className="card-footer-item"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Website
-              </a>
+              <SocialLinks postPath={slug} postNode={postNode} />
             </footer>
           </div>
 
-          {/* <div className="post-meta">
-            <SocialLinks postPath={slug} postNode={postNode} />
-          </div> */}
-          {/* <Disqus postNode={postNode} /> */}
-          {/* <Footer config={config} /> */}
+          <Disqus postNode={postNode} />
         </div>
       </Layout>
     );

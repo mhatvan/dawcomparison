@@ -6,11 +6,11 @@
   align-content: center;
   align-items: center;
   margin: 15px 0;
+  width: 100%;
 }
 
-.social-links > div {
-  margin: 5px 15px;
-  cursor: pointer;
+.social-links > .react-share__ShareButton {
+  margin: 0 5px;
 }
 
 .share-count {

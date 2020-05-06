@@ -2,8 +2,8 @@
 title: "Pro Tools Standard"
 version: "2020"
 maker: "Avid"
-cover: "images/protools.jpg"
-logo: "logos/protools.png"
+cover: "/images/protools.jpg"
+logo: "/logos/protools.png"
 date: "2020-05-05"
 slug: "pro-tools"
 price: "$600"
@@ -13,7 +13,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/9kZp25dSd0g"
 website: "https://www.avid.com/pro-tools"

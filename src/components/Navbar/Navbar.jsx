@@ -17,7 +17,6 @@ const Navbar = () => {
         className="navbar is-fixed-top"
         role="navigation"
         aria-label="main navigation"
-        style={{ borderBottom: "4px solid black" }}
       >
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
@@ -53,12 +52,12 @@ const Navbar = () => {
               <strong>What is a DAW?</strong>
             </Link>
 
-            <Link to="/vst-comparison" className="navbar-item">
-              <strong>VST Comparison</strong>
-            </Link>
-
             <Link to="/about" className="navbar-item">
               <strong>About</strong>
+            </Link>
+
+            <Link to="/vst-comparison" className="navbar-item">
+              <strong>VST Comparison</strong>
             </Link>
 
             <a

@@ -2,8 +2,8 @@
 title: "Cubase Pro"
 version: "10.5"
 maker: "Steinberg"
-cover: "images/cubase.png"
-logo: "logos/cubase.png"
+cover: "/images/cubase.png"
+logo: "/logos/cubase.png"
 date: "2020-05-05"
 slug: "cubase"
 price: "$599"
@@ -13,7 +13,8 @@ os:
 useCase:
   - Songwriting
   - Recording
-  - Mixing / Editing
+  - Mixing
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube.com/embed/lSZ8yX1viV8"
 website: "https://www.steinberg.net/en/home.html"
