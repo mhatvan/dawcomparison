@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
             <span className="icon is-medium brand">
-              <i className="far fa-chart-bar" />
+              <img src="/logos/dawcomparison-logo-1024.png" alt="asdf" />
             </span>
             <span style={{ marginLeft: 10 }}>
               <strong>DAW Comparison</strong>{" "}

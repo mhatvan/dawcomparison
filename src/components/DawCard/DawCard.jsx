@@ -1,30 +1,23 @@
 import { LayoutOutlined, UnorderedListOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { flatten } from "lodash";
 import { OutboundLink } from "gatsby-plugin-gtag";
 import { Button, Col, Input, Result, Row, Select, Slider, Tag } from "antd";
 import { DAWCardDetails } from "./DawCardDetails";
 import { DawTable } from "./DawTable";
 
-const initialState = {
-  filteredData: [],
-  filterActive: false,
-  query: "",
-  viewmode: null,
-};
-
 const DawCard = ({ postEdges }) => {
-  const [state, setState] = useState(initialState);
+  const [query, setQuery] = useState("");
+  const [makerFilterValue, setMakerFilterValue] = useState([]);
+  const [useCaseFilterValue, setUseCaseFilterValue] = useState(null);
+  const [osFilterValue, setOsFilterValue] = useState(null);
+  const [priceFilterValue, setPriceFilterValue] = useState(null);
 
-  useEffect(() => {
-    setState({
-      ...state,
-      viewmode: localStorage.getItem("viewmode") || "card",
-    });
-  }, []);
+  const [filteredData, setFilteredData] = useState(null);
+  const [viewMode, setViewMode] = useState(null);
 
-  const getPostList = () => {
+  const getPostList = useCallback(() => {
     return (postEdges || []).map(({ node }) => ({
       path: node.fields.slug,
       cover: node.frontmatter.cover,
@@ -40,99 +33,80 @@ const DawCard = ({ postEdges }) => {
       plugin: node.frontmatter.plugin,
       interface: node.frontmatter.interface,
     }));
-  };
+  }, [postEdges]);
 
-  const postList = getPostList();
+  useEffect(() => {
+    setViewMode(localStorage.getItem("viewmode") || "card");
+
+    let postList = getPostList();
+
+    if (query) {
+      const trimmedQuery = query.trim();
+      postList = postList.filter(
+        (post) =>
+          post.title.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+          post.maker.toLowerCase().includes(trimmedQuery.toLowerCase())
+      );
+    }
+
+    if (makerFilterValue.length > 0) {
+      postList = postList.filter((post) =>
+        makerFilterValue.includes(post.maker)
+      );
+    }
+
+    if (useCaseFilterValue) {
+      postList = postList.filter((post) =>
+        post.useCase.includes(useCaseFilterValue)
+      );
+    }
+
+    if (osFilterValue) {
+      postList = postList.filter((post) => post.os.includes(osFilterValue));
+    }
+
+    if (priceFilterValue) {
+      const [min, max] = priceFilterValue;
+      postList = postList.filter((post) => {
+        const convertedPrice =
+          post.price === "Free" ? 0 : +post.price.replace("$", "");
+
+        return convertedPrice >= min && convertedPrice <= max;
+      });
+    }
+
+    setFilteredData(postList);
+  }, [
+    getPostList,
+    makerFilterValue,
+    osFilterValue,
+    priceFilterValue,
+    query,
+    useCaseFilterValue,
+  ]);
 
   const handleSearch = (event) => {
-    const query = event.target.value;
-
-    const filteredData = postList.filter((post) => {
-      return post.title.toLowerCase().includes(query.toLowerCase());
-    });
-
-    setState({
-      ...state,
-      query,
-      filteredData,
-    });
+    const searchQuery = event.target.value;
+    setQuery(searchQuery);
   };
 
   const handleOSFilter = (value) => {
-    if (!value) {
-      return setState({
-        ...state,
-        filteredData: postList,
-        filterActive: false,
-      });
-    }
-
-    const filteredData = postList.filter((post) => {
-      return post.os.includes(value);
-    });
-
-    return setState({
-      ...state,
-      filteredData,
-      filterActive: true,
-    });
+    setOsFilterValue(value);
   };
 
   const handleUseCaseFilter = (value) => {
-    if (!value) {
-      return setState({
-        ...state,
-        filteredData: postList,
-        filterActive: false,
-      });
-    }
-
-    const filteredData = postList.filter((post) => {
-      return post.useCase.includes(value);
-    });
-
-    return setState({
-      ...state,
-      filteredData,
-      filterActive: true,
-    });
+    setUseCaseFilterValue(value);
   };
 
   const handleMakerFilter = (value) => {
-    if (!value || value.length === 0) {
-      return setState({
-        ...state,
-        filteredData: postList,
-        filterActive: false,
-      });
-    }
-
-    const filteredData = postList.filter((post) => {
-      return value.includes(post.maker);
-    });
-
-    return setState({
-      ...state,
-      filteredData,
-      filterActive: true,
-    });
+    setMakerFilterValue(value);
   };
 
   const handlePriceSliderFilter = (value) => {
-    const [min, max] = value;
-    const filteredData = postList.filter((post) => {
-      const convertedPrice =
-        post.price === "Free" ? 0 : +post.price.replace("$", "");
-
-      return convertedPrice >= min && convertedPrice <= max;
-    });
-
-    setState({
-      ...state,
-      filteredData,
-      filterActive: true,
-    });
+    setPriceFilterValue(value);
   };
+
+  const postList = getPostList();
 
   const uniqueMakers = postList
     .map((post) => post.maker)
@@ -148,9 +122,12 @@ const DawCard = ({ postEdges }) => {
     (useCase, idx, arr) => arr.indexOf(useCase) === idx
   );
 
-  const { filteredData, query, filterActive, viewmode } = state;
-
-  const activeFiltering = query || filterActive;
+  const activeFiltering =
+    query ||
+    makerFilterValue.length > 0 ||
+    useCaseFilterValue ||
+    osFilterValue ||
+    priceFilterValue;
 
   const posts = activeFiltering ? filteredData : postList;
 
@@ -163,13 +140,12 @@ const DawCard = ({ postEdges }) => {
   };
 
   const changeViewMode = (mode) => {
-    setState({ ...state, viewmode: mode });
+    setViewMode(mode);
     localStorage.setItem("viewmode", mode);
   };
 
   return (
     <div className="container">
-      {/* <Affix offsetTop={4}> */}
       <Row gutter={[16, 8]} align="middle">
         <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <Input
@@ -264,20 +240,19 @@ const DawCard = ({ postEdges }) => {
               onClick={() => changeViewMode("card")}
               icon={<LayoutOutlined />}
               title="Card view"
-              {...(viewmode === "card" ? { type: "primary" } : {})}
+              {...(viewMode === "card" ? { type: "primary" } : {})}
             />
             <Button
               onClick={() => changeViewMode("list")}
               icon={<UnorderedListOutlined />}
               title="List view"
-              {...(viewmode === "list" ? { type: "primary" } : {})}
+              {...(viewMode === "list" ? { type: "primary" } : {})}
             />
           </Button.Group>
         </Col>
       </Row>
-      {/* </Affix> */}
       <Row gutter={[16, 32]}>
-        {viewmode === "list" ? (
+        {viewMode === "list" ? (
           <Col xs={24}>
             <DawTable posts={posts} />
           </Col>
@@ -340,7 +315,7 @@ const DawCard = ({ postEdges }) => {
         <Col span={24}>
           {activeFiltering &&
           filteredData.length === 0 &&
-          viewmode === "card" ? (
+          viewMode === "card" ? (
             <Result
               status="info"
               title="No DAWs found for this search term."

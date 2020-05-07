@@ -14,7 +14,7 @@ module.exports = {
       image_url: `${urljoin(
         config.siteUrl,
         config.pathPrefix
-      )}/logos/logo-512.png`,
+      )}/logos/dawcomparison-logo-512.png`,
       copyright: config.copyright,
     },
   },
@@ -27,6 +27,12 @@ module.exports = {
       options: {
         fonts: [`Roboto:700`, `Open Sans:600`],
         display: "swap",
+      },
+    },
+    {
+      resolve: `@isamrish/gatsby-plugin-google-adsense`,
+      options: {
+        googleAdClientId: `ca-pub-6808378297255624`,
       },
     },
     {
@@ -115,12 +121,12 @@ module.exports = {
         display: "minimal-ui",
         icons: [
           {
-            src: "/logos/logo-192.png",
+            src: "/logos/dawcomparison-logo-192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/logos/logo-512.png",
+            src: "/logos/dawcomparison-logo-512.png",
             sizes: "512x512",
             type: "image/png",
           },

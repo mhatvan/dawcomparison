@@ -112,6 +112,9 @@ class TermsOfService extends Component {
           complete or current. DAWComparison may make changes to the materials
           contained on its website at any time without notice. However
           DAWComparison does not make any commitment to update the materials.
+          DAWComparison uses media materials from various sources and does not
+          claim ownership for any of them. Any and all brands (and their logos)
+          named or displayed on this website belong to their owners.
         </Typography.Paragraph>
         <Typography.Title level={2}>6. Links</Typography.Title>
         <Typography.Paragraph>
