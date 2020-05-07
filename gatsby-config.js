@@ -19,41 +19,6 @@ module.exports = {
     },
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-react-helmet-async",
-    "gatsby-plugin-lodash",
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Roboto:700`, `Open Sans:600`],
-        display: "swap",
-      },
-    },
-    {
-      resolve: `@isamrish/gatsby-plugin-google-adsense`,
-      options: {
-        googleAdClientId: `ca-pub-6808378297255624`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-antd",
-      options: {
-        style: true,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-less",
-      options: {
-        javascriptEnabled: true,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-import",
-      options: {
-        libraryName: "antd",
-        style: true, // or 'css'
-      },
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -61,13 +26,8 @@ module.exports = {
         path: `${__dirname}/static/`,
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "posts",
-        path: `${__dirname}/content/`,
-      },
-    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -90,6 +50,48 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet-async",
+    "gatsby-plugin-lodash",
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto:700`, `Open Sans:600`],
+        display: "swap",
+      },
+    },
+    // {
+    //   resolve: `@isamrish/gatsby-plugin-google-adsense`,
+    //   options: {
+    //     googleAdClientId: `ca-pub-6808378297255624`,
+    //   },
+    // },
+    {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-less",
+      options: {
+        javascriptEnabled: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-import",
+      options: {
+        libraryName: "antd",
+        style: true, // or 'css'
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/content/`,
+      },
+    },
     {
       resolve: "gatsby-plugin-gtag",
       options: {
@@ -105,8 +107,7 @@ module.exports = {
         color: config.themeColor,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+
     "gatsby-plugin-catch-links",
     "gatsby-plugin-sitemap",
     {
@@ -119,6 +120,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",
+        icon: `static/logos/dawcomparison-logo-192.png`,
         icons: [
           {
             src: "/logos/dawcomparison-logo-192.png",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { GithubOutlined } from "@ant-design/icons";
+import Image from "../Image";
 
 const Navbar = () => {
   const [burgerMenuActive, setBurgerMenuActive] = useState("");

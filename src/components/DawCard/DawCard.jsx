@@ -6,6 +6,7 @@ import { OutboundLink } from "gatsby-plugin-gtag";
 import { Button, Col, Input, Result, Row, Select, Slider, Tag } from "antd";
 import { DAWCardDetails } from "./DawCardDetails";
 import { DawTable } from "./DawTable";
+import Image from "../Image";
 
 const DawCard = ({ postEdges }) => {
   const [query, setQuery] = useState("");
@@ -270,12 +271,7 @@ const DawCard = ({ postEdges }) => {
                   xxl={6}
                 >
                   <div className="card">
-                    <div className="card-image">
-                      <figure className="image is-4by3">
-                        <img src={post.cover} alt="DAW preview" />
-                      </figure>
-                    </div>
-
+                    <Image src={post.cover.slice(1)} alt="DAW preview" />
                     <div className="card-content">
                       <div className="media">
                         <div className="media-content">
@@ -289,7 +285,7 @@ const DawCard = ({ postEdges }) => {
                         </div>
                         <div className="media-right">
                           <figure className="image is-48x48">
-                            <img src={post.logo} alt="DAW logo" />
+                            <Image src={post.logo.slice(1)} alt="DAW logo" />
                           </figure>
                         </div>
                       </div>

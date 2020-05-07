@@ -6,6 +6,15 @@ body {
   font-family: "Open Sans" !important;
 }
 
+.gatsby-image-wrapper > div {
+  padding-bottom: 77.5% !important; /* your aspect ratio */
+}
+
+.gatsby-image-outer-wrapper,
+.gatsby-image-wrapper {
+  height: 100%;
+}
+
 .navbar {
   font-family: "Roboto";
   border-bottom: 4px solid #3b58bf8f;
