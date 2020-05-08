@@ -2,13 +2,17 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { graphql } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-gtag";
+import { Card, Col, Row } from "antd";
+import { faMinusCircle, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../layout";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import { DAWCardDetails } from "../components/DawCard/DawCardDetails";
+import {
+  DAWCardDetails,
+  IconAndText,
+} from "../components/DawCard/DawCardDetails";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import Disqus from "../components/Disqus/Disqus";
-import Image from "../components/Image";
 
 import "./b16-tomorrow-dark.css";
 import "./post.css";
@@ -30,88 +34,81 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="container">
-          <div className="card">
-            <div className="card-image">
-              <figure className="image is-16by9">
+          <Card
+            cover={
+              <div className="video_wrapper">
                 <iframe
                   title="DAW Video"
-                  className="has-ratio"
+                  className="iframe-style"
                   src={post.video}
+                  width="640"
+                  height="360"
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
-              </figure>
-            </div>
-            <div className="card-content">
-              <div className="media">
-                <div className="media-content">
-                  <p className="title is-4">
-                    <OutboundLink
-                      href={post.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {post.title} {post.version}
-                    </OutboundLink>
-                  </p>
-
-                  <DAWCardDetails post={post} />
-                </div>
-                <div className="media-right">
-                  <figure className="image is-48x48">
-                    <Image src={post.logo.slice(1)} alt="DAW logo" />
-                  </figure>
-                </div>
               </div>
+            }
+            actions={[<SocialLinks postPath={slug} postNode={postNode} />]}
+          >
+            <Card.Meta
+              title={
+                <>
+                  <OutboundLink
+                    href={post.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {post.title} {post.version}
+                  </OutboundLink>
+                  <br />
+                  by {post.maker}
+                </>
+              }
+              description={
+                <>
+                  <DAWCardDetails post={post} />
 
-              <div className="content">
-                <article className="message">
-                  <div className="message-header">
-                    <p>Pros & Cons</p>
-                  </div>
-                  <div className="message-body">
-                    <div className="columns is-multiline">
-                      <div className="column">
+                  <br />
+                  <Card title="Pros & Cons">
+                    <Row>
+                      <Col span={12}>
                         {post.pros &&
                           post.pros.map((pro) => {
                             return (
                               <div key={pro}>
-                                <span className="icon has-text-success">
-                                  <i className="fas fa-plus-circle" />
-                                </span>
-                                {pro}
-                                <br />
+                                <IconAndText icon={faPlusCircle} text={pro} />
                               </div>
                             );
                           })}
-                      </div>
-
-                      <div className="column">
+                      </Col>
+                      <Col span={12}>
                         {post.cons &&
                           post.cons.map((con) => {
                             return (
                               <div key={con}>
-                                <span className="icon has-text-danger">
-                                  <i className="fas fa-minus-circle" />
-                                </span>
-                                {con}
-                                <br />
+                                <IconAndText icon={faMinusCircle} text={con} />
                               </div>
                             );
                           })}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <br />
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              </div>
-            </div>
-            <footer className="card-footer">
-              <SocialLinks postPath={slug} postNode={postNode} />
-            </footer>
-          </div>
+                      </Col>
+                    </Row>
+                  </Card>
+
+                  <br />
+
+                  <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                </>
+              }
+            />
+
+            <img
+              src={post.logo}
+              alt="DAW logo"
+              height="50"
+              className="logo-wrapper"
+            />
+          </Card>
 
           <Disqus postNode={postNode} />
         </div>

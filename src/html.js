@@ -12,13 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        {process.env.NODE_ENV !== "development" ? (
-          <script
-            data-ad-client="ca-pub-6808378297255624"
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          />
-        ) : null}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -28,6 +21,13 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        {process.env.NODE_ENV !== "development" ? (
+          <script
+            data-ad-client="ca-pub-6808378297255624"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          />
+        ) : null}
       </body>
     </html>
   );

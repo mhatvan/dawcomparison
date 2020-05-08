@@ -1,9 +1,22 @@
-import { LayoutOutlined, UnorderedListOutlined } from "@ant-design/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquare } from "@fortawesome/free-regular-svg-icons";
+import { faTable } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "gatsby";
 import React, { useState, useEffect, useCallback } from "react";
 import { flatten } from "lodash";
 import { OutboundLink } from "gatsby-plugin-gtag";
-import { Button, Col, Input, Result, Row, Select, Slider, Tag } from "antd";
+import {
+  Button,
+  Col,
+  Input,
+  Result,
+  Row,
+  Select,
+  Slider,
+  Tag,
+  Card,
+  Alert,
+} from "antd";
 import { DAWCardDetails } from "./DawCardDetails";
 import { DawTable } from "./DawTable";
 import Image from "../Image";
@@ -239,13 +252,14 @@ const DawCard = ({ postEdges }) => {
           <Button.Group>
             <Button
               onClick={() => changeViewMode("card")}
-              icon={<LayoutOutlined />}
+              icon={<FontAwesomeIcon icon={faSquare} />}
               title="Card view"
               {...(viewMode === "card" ? { type: "primary" } : {})}
             />
+
             <Button
               onClick={() => changeViewMode("list")}
-              icon={<UnorderedListOutlined />}
+              icon={<FontAwesomeIcon icon={faTable} />}
               title="List view"
               {...(viewMode === "list" ? { type: "primary" } : {})}
             />
@@ -270,27 +284,11 @@ const DawCard = ({ postEdges }) => {
                   xl={8}
                   xxl={6}
                 >
-                  <div className="card">
-                    <Image src={post.cover.slice(1)} alt="DAW preview" />
-                    <div className="card-content">
-                      <div className="media">
-                        <div className="media-content">
-                          <p className="title is-4">
-                            <Link to={post.path} key={post.title}>
-                              {post.title} {post.version}
-                            </Link>
-                          </p>
-
-                          <DAWCardDetails post={post} />
-                        </div>
-                        <div className="media-right">
-                          <figure className="image is-48x48">
-                            <Image src={post.logo.slice(1)} alt="DAW logo" />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                    <footer className="card-footer">
+                  <Card
+                    cover={
+                      <Image src={post.cover.slice(1)} alt="DAW preview" />
+                    }
+                    actions={[
                       <OutboundLink
                         href={post.website}
                         className="card-footer-item"
@@ -298,9 +296,29 @@ const DawCard = ({ postEdges }) => {
                         rel="noopener noreferrer"
                       >
                         Website
-                      </OutboundLink>
-                    </footer>
-                  </div>
+                      </OutboundLink>,
+                    ]}
+                  >
+                    <Card.Meta
+                      title={
+                        <>
+                          <Link to={post.path} key={post.title}>
+                            {post.title} {post.version}
+                          </Link>
+                          <br />
+                          by {post.maker}
+                        </>
+                      }
+                      description={<DAWCardDetails post={post} />}
+                    />
+
+                    <img
+                      src={post.logo}
+                      alt="DAW logo"
+                      height="50"
+                      className="logo-wrapper"
+                    />
+                  </Card>
                 </Col>
               );
             })}
@@ -319,29 +337,32 @@ const DawCard = ({ postEdges }) => {
             />
           ) : (
             <>
-              <article className="message is-info">
-                <div className="message-body">
-                  Note that all prices listed above are estimated and can be
-                  deviating due to currency differences or active discounts.
-                </div>
-              </article>
-              <article className="message is-info">
-                <div className="message-body">
-                  Didn&#39;t find the DAW you were looking for? Write me on{" "}
-                  <OutboundLink
-                    href="https://github.com/mhatvan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </OutboundLink>{" "}
-                  or{" "}
-                  <OutboundLink href="mailto:markus_hatvan@aon.at">
-                    Email
-                  </OutboundLink>{" "}
-                  to include it.
-                </div>
-              </article>
+              <Alert
+                message="Note that all prices listed above are estimated and can be
+                  deviating due to currency differences or active discounts."
+                type="info"
+              />
+              <br />
+              <Alert
+                message={
+                  <>
+                    Didn&#39;t find the DAW you were looking for? Write me on{" "}
+                    <OutboundLink
+                      href="https://github.com/mhatvan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                    </OutboundLink>{" "}
+                    or{" "}
+                    <OutboundLink href="mailto:markus_hatvan@aon.at">
+                      Email
+                    </OutboundLink>{" "}
+                    to include it.
+                  </>
+                }
+                type="info"
+              />
             </>
           )}
         </Col>

@@ -1,37 +1,45 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMicrophoneAlt,
+  faTag,
+  faMusic,
+  faPlug,
+  faDesktop,
+  faSitemap,
+} from "@fortawesome/free-solid-svg-icons";
+import { Typography } from "antd";
 import { joinByColon } from "../../helpers/utils";
 
-const IconAndText = ({ icon, text }) => {
+const { Text } = Typography;
+
+export const IconAndText = ({ icon, text }) => {
   return (
-    <>
-      <span className="icon has-text-info" style={{ marginRight: 10 }}>
-        <i className={`fas fa-${icon}`} />
-      </span>
-      {text}
-      <br />
-    </>
+    <div>
+      <Text>
+        <span className="logo-text-wrapper">
+          <FontAwesomeIcon icon={icon} />
+        </span>
+        {text}
+      </Text>
+    </div>
   );
 };
 
 export const DAWCardDetails = ({ post }) => {
   return (
-    <p className="subtitle is-6">
-      <span style={{ color: "grey" }}>by {post.maker}</span>
+    <>
+      <IconAndText icon={faTag} text={post.price} />
 
-      <br />
-      <br />
+      <IconAndText icon={faMusic} text={post.genre} />
 
-      <IconAndText icon="tag" text={post.price} />
+      <IconAndText icon={faMicrophoneAlt} text={joinByColon(post.useCase)} />
 
-      <IconAndText icon="music" text={post.genre} />
+      <IconAndText icon={faDesktop} text={joinByColon(post.os)} />
 
-      <IconAndText icon="microphone-alt" text={joinByColon(post.useCase)} />
+      <IconAndText icon={faPlug} text={joinByColon(post.plugin)} />
 
-      <IconAndText icon="desktop" text={joinByColon(post.os)} />
-
-      <IconAndText icon="plug" text={joinByColon(post.plugin)} />
-
-      <IconAndText icon="sitemap" text={joinByColon(post.interface)} />
-    </p>
+      <IconAndText icon={faSitemap} text={joinByColon(post.interface)} />
+    </>
   );
 };

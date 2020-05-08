@@ -1,30 +1,31 @@
-import React from "react";
-import { OutboundLink } from "gatsby-plugin-gtag";
-import { Typography, Col } from "antd";
+import { Typography, Menu } from "antd";
 import { Link } from "gatsby";
-import "./Footer.css";
+import { OutboundLink } from "gatsby-plugin-gtag";
+import React from "react";
 
 const Footer = ({ config }) => {
   return (
     <footer className="footer">
-      <div className="notice-container">
-        <div className="navbar-menu">
-          <div className="navbar-end">
-            <Link to="/imprint" className="navbar-item">
-              Imprint
-            </Link>
-            <Link to="/privacy-policy" className="navbar-item">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-of-service" className="navbar-item">
-              Terms of Service
-            </Link>
-            <Typography.Text className="navbar-item">
-              {config.copyright}
-            </Typography.Text>
-          </div>
-        </div>
-      </div>
+      <Typography.Text>{config.copyright}</Typography.Text>
+
+      <OutboundLink
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.buymeacoffee.com/mhatvan"
+      >
+        Buy me a coffee
+      </OutboundLink>
+      <Menu mode="horizontal">
+        <Menu.Item key="imprint">
+          <Link to="/imprint">Imprint</Link>
+        </Menu.Item>
+        <Menu.Item key="privacy-policy">
+          <Link to="/privacy-policy">Privacy Policy</Link>
+        </Menu.Item>
+        <Menu.Item key="terms-of-service">
+          <Link to="/terms-of-service">Terms of Service</Link>
+        </Menu.Item>
+      </Menu>
     </footer>
   );
 };

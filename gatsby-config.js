@@ -60,12 +60,6 @@ module.exports = {
         display: "swap",
       },
     },
-    // {
-    //   resolve: `@isamrish/gatsby-plugin-google-adsense`,
-    //   options: {
-    //     googleAdClientId: `ca-pub-6808378297255624`,
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-antd",
       options: {
@@ -218,5 +212,6 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-netlify-cache",
   ],
 };

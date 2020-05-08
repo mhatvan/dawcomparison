@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { OutboundLink } from "gatsby-plugin-gtag";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./UserLinks.css";
 
 class UserLinks extends Component {
@@ -13,18 +16,14 @@ class UserLinks extends Component {
             rel="noopener noreferrer"
             className="button is-dark"
           >
-            <span className="icon">
-              <i className="fab fa-github" />
-            </span>
+            <FontAwesomeIcon icon={faGithub} />
             <span>GitHub</span>
           </OutboundLink>
           <OutboundLink
             href="mailto:markus_hatvan@aon.at"
             className="button is-link"
           >
-            <span className="icon">
-              <i className="fas fa-envelope" />
-            </span>
+            <FontAwesomeIcon icon={faEnvelope} />
             <span>Email</span>
           </OutboundLink>
         </p>
