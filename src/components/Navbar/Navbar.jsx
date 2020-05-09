@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { OutboundLink } from "gatsby-plugin-gtag";
 import { Menu, Drawer, Button } from "antd";
+import "./Navbar.css";
 
 const RightMenu = ({ mode = "horizontal" }) => (
   <Menu mode={mode}>
-    <Menu.Item key="what-is-daw">
+    {/* <Menu.Item key="what-is-daw">
       <Link to="/what-is-daw">What is a DAW?</Link>
-    </Menu.Item>
+    </Menu.Item> */}
     <Menu.Item key="about">
       <Link to="/about">About</Link>
     </Menu.Item>
@@ -23,8 +23,8 @@ const RightMenu = ({ mode = "horizontal" }) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span style={{ marginRight: 10 }}>Github</span>{" "}
-        <FontAwesomeIcon icon={faGithub} style={{ width: 14 }} />
+        Github
+        {/* <FontAwesomeIcon icon={faGithub} style={{ width: 14 }} /> */}
       </OutboundLink>
     </Menu.Item>
   </Menu>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar is-fixed-top">
-      <Link to="/" style={{ marginLeft: 12 }}>
+      <Link to="/" style={{ paddingLeft: 15 }}>
         <img
           src="/logos/dawcomparison-logo-48.png"
           width="36"
@@ -57,7 +57,7 @@ const Navbar = () => {
         <RightMenu />
       </div>
 
-      <Button className="burgerPos" type="primary" onClick={showDrawer}>
+      <Button className="burgerPos" onClick={showDrawer}>
         <FontAwesomeIcon icon={faBars} />
       </Button>
       <Drawer

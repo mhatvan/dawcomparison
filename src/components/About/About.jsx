@@ -19,7 +19,7 @@ class About extends Component {
 
         <Typography.Paragraph>
           It is a win-win situation: I want to learn about{" "}
-          <a href="https://www.gatsbyjs.org/">Gatsbyjs</a>, visitors of the
+          <a href="https://www.gatsbyjs.org/">Gatsby</a>, visitors of the
           website can gather information and the companies behind the DAWs get
           free promotion.
         </Typography.Paragraph>

@@ -2,50 +2,44 @@ body {
   font-family: "Open Sans" !important;
 }
 
-.gatsby-image-wrapper > div {
-  padding-bottom: 56.25% !important; /* your aspect ratio */
+body.has-navbar-fixed-top,
+html.has-navbar-fixed-top {
+  padding-top: 48px;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .container {
+    max-width: 1344px;
+  }
 }
 
 .layout-container {
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 96px);
   padding: 15px;
   background: ghostwhite;
 }
 
-.navbar {
-  font-family: "Roboto";
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.burgerPos {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .burgerPos {
-    display: inline-block;
-    margin: 8px 0;
-    margin-right: 15px;
-  }
-}
-
-.rightMenu {
-  margin-right: 15px;
-}
-
-@media (max-width: 767px) {
-  .rightMenu {
-    display: none;
-  }
-}
-
-.ant-menu-inline,
-.ant-menu-vertical,
-.ant-menu-vertical-left {
-  border-right: unset !important;
+.gatsby-image-wrapper > div {
+  padding-bottom: 56.25% !important; /* your aspect ratio */
 }
 
 .ant-card-body {
@@ -78,81 +72,6 @@ body {
   height: 100%;
 }
 
-.container {
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: auto;
-}
-
-.container.is-fluid {
-  max-width: none;
-  padding-left: 32px;
-  padding-right: 32px;
-  width: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media screen and (max-width: 1215px) {
-  .container.is-widescreen {
-    max-width: 1152px;
-  }
-}
-
-@media screen and (max-width: 1407px) {
-  .container.is-fullhd {
-    max-width: 1344px;
-  }
-}
-
-@media screen and (min-width: 1216px) {
-  .container {
-    max-width: 1152px;
-  }
-}
-
-@media screen and (min-width: 1408px) {
-  .container {
-    max-width: 1344px;
-  }
-}
-
-body.has-navbar-fixed-top,
-html.has-navbar-fixed-top {
-  padding-top: 48px;
-}
-
-.navbar.is-fixed-top {
-  top: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 30;
-  background: white;
-}
-
 .ant-tag {
   white-space: normal !important;
-}
-
-.footer {
-  border-top: 4px solid #3b58bf8f;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media (max-width: 700px) {
-  .footer {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
 }

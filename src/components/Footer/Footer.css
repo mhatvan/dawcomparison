@@ -1,0 +1,22 @@
+.footer {
+  font-family: "Roboto";
+  border-top: 4px solid #3b58bf8f;
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.ant-menu-horizontal {
+  border-bottom: unset !important;
+}

@@ -8,7 +8,7 @@ class TermsOfServicePage extends Component {
   render() {
     return (
       <Layout>
-        <div className="terms-of-service-container">
+        <div className="container">
           <Helmet title={`Terms of Service | ${config.siteTitle}`} />
           <TermsOfService />
         </div>

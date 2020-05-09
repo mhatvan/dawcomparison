@@ -8,7 +8,7 @@ class WhatIsDawPage extends Component {
   render() {
     return (
       <Layout>
-        <div className="daw-container">
+        <div className="container">
           <Helmet title={`What is a DAW? | ${config.siteTitle}`} />
           <WhatIsDaw />
         </div>
