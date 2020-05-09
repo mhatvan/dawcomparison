@@ -33,7 +33,7 @@ html.has-navbar-fixed-top {
 }
 
 .layout-container {
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - 97px);
   padding: 15px;
   background: ghostwhite;
 }
@@ -47,9 +47,14 @@ html.has-navbar-fixed-top {
 }
 
 .logo-wrapper {
+  width: 75px;
   position: absolute;
-  right: 20px;
-  top: 15px;
+  right: 5px;
+  top: 20px;
+}
+
+.logo-wrapper img {
+  object-fit: contain !important;
 }
 
 .logo-text-wrapper {

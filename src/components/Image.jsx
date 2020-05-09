@@ -10,7 +10,7 @@ const Image = ({ src, ...props }) => {
           node {
             relativePath
             childImageSharp {
-              fluid(maxWidth: 750, quality: 80) {
+              fluid(maxWidth: 500, quality: 80) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

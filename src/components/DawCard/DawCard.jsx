@@ -312,12 +312,9 @@ const DawCard = ({ postEdges }) => {
                       description={<DAWCardDetails post={post} />}
                     />
 
-                    <img
-                      src={post.logo}
-                      alt="DAW logo"
-                      height="50"
-                      className="logo-wrapper"
-                    />
+                    <div className="logo-wrapper">
+                      <Image src={post.logo.slice(1)} alt="DAW logo" />
+                    </div>
                   </Card>
                 </Col>
               );

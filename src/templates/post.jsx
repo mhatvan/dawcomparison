@@ -13,6 +13,7 @@ import {
 } from "../components/DawCard/DawCardDetails";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import Disqus from "../components/Disqus/Disqus";
+import Image from "../components/Image";
 
 import "./b16-tomorrow-dark.css";
 import "./post.css";
@@ -102,12 +103,9 @@ export default class PostTemplate extends React.Component {
               }
             />
 
-            <img
-              src={post.logo}
-              alt="DAW logo"
-              height="50"
-              className="logo-wrapper"
-            />
+            <div className="logo-wrapper">
+              <Image src={post.logo.slice(1)} alt="DAW logo" />
+            </div>
           </Card>
 
           <Disqus postNode={postNode} />
