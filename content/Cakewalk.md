@@ -15,7 +15,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/8PVxIqeDZ7U"
+video: "https://www.youtube-nocookie.com/embed/8PVxIqeDZ7U"
 website: "https://www.cakewalk.com/products/SONAR/"
 pros:
   - a

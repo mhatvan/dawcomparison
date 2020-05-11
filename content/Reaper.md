@@ -16,7 +16,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/kn2SlBMpzwY"
+video: "https://www.youtube-nocookie.com/embed/kn2SlBMpzwY"
 website: "https://www.reaper.fm/"
 pros:
   - a

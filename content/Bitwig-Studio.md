@@ -17,7 +17,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/Nfv5Lvi9w-w"
+video: "https://www.youtube-nocookie.com/embed/Nfv5Lvi9w-w"
 website: "https://www.bitwig.com/en/home.html"
 pros:
   - a

@@ -14,7 +14,7 @@ os:
 useCase:
   - Recording
 genre: "Any genre"
-video: "https://www.youtube.com/embed/LQ7n9pA0qc0"
+video: "https://www.youtube-nocookie.com/embed/LQ7n9pA0qc0"
 website: "https://www.audacityteam.org/"
 pros:
   - Free tool for recording audio

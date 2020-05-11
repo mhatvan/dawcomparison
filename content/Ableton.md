@@ -16,7 +16,7 @@ useCase:
   - Mixing
   - Editing
 genre: "EDM"
-video: "https://www.youtube.com/embed/Z9Ku5ptjzKw"
+video: "https://www.youtube-nocookie.com/embed/Z9Ku5ptjzKw"
 website: "https://www.ableton.com/en/"
 pros:
   - Live functionality

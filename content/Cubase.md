@@ -16,7 +16,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/lSZ8yX1viV8"
+video: "https://www.youtube-nocookie.com/embed/lSZ8yX1viV8"
 website: "https://www.steinberg.net/en/home.html"
 pros:
   - a

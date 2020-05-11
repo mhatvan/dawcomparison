@@ -18,7 +18,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/GG-ceH6fLw4"
+video: "https://www.youtube-nocookie.com/embed/GG-ceH6fLw4"
 website: "https://new.steinberg.net/nuendo/"
 pros:
   - a

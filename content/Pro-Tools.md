@@ -16,7 +16,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/9kZp25dSd0g"
+video: "https://www.youtube-nocookie.com/embed/9kZp25dSd0g"
 website: "https://www.avid.com/pro-tools"
 pros:
   - Popular for mixing & mastering engineers

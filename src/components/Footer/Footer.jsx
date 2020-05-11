@@ -1,6 +1,5 @@
 import { Typography, Menu, Space, Button, Col } from "antd";
 import { Link } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-gtag";
 import React from "react";
 import "./Footer.css";
 
@@ -12,13 +11,13 @@ const Footer = ({ config }) => {
           <Typography.Text>{config.copyright}</Typography.Text>
 
           <Button>
-            <OutboundLink
+            <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.buymeacoffee.com/mhatvan"
             >
               Buy me a coffee
-            </OutboundLink>
+            </a>
           </Button>
         </Space>
       </Col>
@@ -48,13 +47,13 @@ export default Footer;
 //         <Typography.Text>{config.copyright}</Typography.Text>
 
 //         <Button>
-//           <OutboundLink
+//           <a
 //             target="_blank"
 //             rel="noopener noreferrer"
 //             href="https://www.buymeacoffee.com/mhatvan"
 //           >
 //             Buy me a coffee
-//           </OutboundLink>
+//           </a>
 //         </Button>
 //       </Space>
 

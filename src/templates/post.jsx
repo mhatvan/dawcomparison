@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { graphql } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-gtag";
 import { Card, Col, Row } from "antd";
 import { faMinusCircle, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../layout";
@@ -57,13 +56,13 @@ export default class PostTemplate extends React.Component {
             <Card.Meta
               title={
                 <>
-                  <OutboundLink
+                  <a
                     href={post.website}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     {post.title} {post.version}
-                  </OutboundLink>
+                  </a>
                   <br />
                   by {post.maker}
                 </>
@@ -71,39 +70,38 @@ export default class PostTemplate extends React.Component {
               description={
                 <>
                   <DAWCardDetails post={post} />
-
-                  <br />
-                  <Card title="Pros & Cons">
-                    <Row>
-                      <Col span={12}>
-                        {post.pros &&
-                          post.pros.map((pro) => {
-                            return (
-                              <div key={pro}>
-                                <IconAndText icon={faPlusCircle} text={pro} />
-                              </div>
-                            );
-                          })}
-                      </Col>
-                      <Col span={12}>
-                        {post.cons &&
-                          post.cons.map((con) => {
-                            return (
-                              <div key={con}>
-                                <IconAndText icon={faMinusCircle} text={con} />
-                              </div>
-                            );
-                          })}
-                      </Col>
-                    </Row>
-                  </Card>
-
-                  <br />
-
-                  <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 </>
               }
             />
+            <br />
+
+            <Card type="inner" title="Pros & Cons">
+              <Row>
+                <Col span={12}>
+                  {post.pros &&
+                    post.pros.map((pro) => {
+                      return (
+                        <div key={pro}>
+                          <IconAndText icon={faPlusCircle} text={pro} />
+                        </div>
+                      );
+                    })}
+                </Col>
+                <Col span={12}>
+                  {post.cons &&
+                    post.cons.map((con) => {
+                      return (
+                        <div key={con}>
+                          <IconAndText icon={faMinusCircle} text={con} />
+                        </div>
+                      );
+                    })}
+                </Col>
+              </Row>
+            </Card>
+
+            <br />
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
 
             <div className="logo-wrapper">
               <Image src={post.logo.slice(1)} alt="DAW logo" />

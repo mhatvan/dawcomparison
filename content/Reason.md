@@ -16,7 +16,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/tMh3ZEFyEmo"
+video: "https://www.youtube-nocookie.com/embed/tMh3ZEFyEmo"
 website: "https://www.reasonstudios.com/en/reason"
 pros:
   - a

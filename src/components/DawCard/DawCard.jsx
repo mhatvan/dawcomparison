@@ -4,7 +4,6 @@ import { faTable } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "gatsby";
 import React, { useState, useEffect, useCallback } from "react";
 import { flatten } from "lodash";
-import { OutboundLink } from "gatsby-plugin-gtag";
 import {
   Button,
   Col,
@@ -290,7 +289,7 @@ const DawCard = ({ postEdges }) => {
                     }
                     className="cardBoxShadow"
                     actions={[
-                      <OutboundLink
+                      <a
                         key={0}
                         href={post.website}
                         className="card-footer-item"
@@ -298,7 +297,7 @@ const DawCard = ({ postEdges }) => {
                         rel="noopener noreferrer"
                       >
                         Website
-                      </OutboundLink>,
+                      </a>,
                     ]}
                   >
                     <Card.Meta
@@ -346,18 +345,15 @@ const DawCard = ({ postEdges }) => {
                 message={
                   <>
                     Didn&#39;t find the DAW you were looking for? Write me on{" "}
-                    <OutboundLink
+                    <a
                       href="https://github.com/mhatvan"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       GitHub
-                    </OutboundLink>{" "}
-                    or{" "}
-                    <OutboundLink href="mailto:markus_hatvan@aon.at">
-                      Email
-                    </OutboundLink>{" "}
-                    to include it.
+                    </a>{" "}
+                    or <a href="mailto:markus_hatvan@aon.at">Email</a> to
+                    include it.
                   </>
                 }
                 type="info"

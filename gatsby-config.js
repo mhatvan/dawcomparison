@@ -87,12 +87,18 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-gtag",
+      resolve: `gatsby-plugin-gdpr-tracking`,
       options: {
-        trackingId: config.googleAnalyticsID,
-        anonymize: true,
-        respectDNT: true,
-        defer: true,
+        googleAnalytics: {
+          trackingId: config.googleAnalyticsID,
+          autoStart: false,
+          anonymize: true,
+          respectDNT: true,
+          defer: true,
+          controlCookieName: "gdpr-analytics-enabled",
+        },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production", "development"],
       },
     },
     {

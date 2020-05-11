@@ -14,7 +14,7 @@ useCase:
   - Mixing
   - Editing
 genre: "EDM"
-video: "https://www.youtube.com/embed/AuqqiuaLYJA"
+video: "https://www.youtube-nocookie.com/embed/AuqqiuaLYJA"
 website: "https://www.image-line.com/flstudio/"
 pros:
   - a

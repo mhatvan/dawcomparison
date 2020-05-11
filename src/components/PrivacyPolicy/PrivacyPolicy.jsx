@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-import { Typography } from "antd";
+import { Typography, Button, message } from "antd";
+
+const handleGaOptOut = () => {
+  try {
+    window.gaOptout();
+    message.success("Successfully deactivated Google Analytics");
+  } catch (error) {
+    message.error("Deactivating Google Analytics failed");
+  }
+};
 
 class PrivacyPolicy extends Component {
   render() {
@@ -230,6 +239,10 @@ class PrivacyPolicy extends Component {
           By using our website, you hereby consent to our Privacy Policy and
           agree to its terms.
         </Typography.Paragraph>
+
+        <Button type="primary" onClick={handleGaOptOut}>
+          Deactivate Google Analytics
+        </Button>
       </div>
     );
   }

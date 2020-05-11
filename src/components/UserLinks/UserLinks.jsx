@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { OutboundLink } from "gatsby-plugin-gtag";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +9,7 @@ class UserLinks extends Component {
   render() {
     return (
       <div className="user-links">
-        <OutboundLink
+        <a
           href="https://github.com/mhatvan"
           target="_blank"
           rel="noopener noreferrer"
@@ -22,12 +21,12 @@ class UserLinks extends Component {
           >
             <span style={{ marginLeft: 5 }}>GitHub</span>
           </Button>
-        </OutboundLink>
-        <OutboundLink href="mailto:markus_hatvan@aon.at">
+        </a>
+        <a href="mailto:markus_hatvan@aon.at">
           <Button type="primary" icon={<FontAwesomeIcon icon={faEnvelope} />}>
             <span style={{ marginLeft: 5 }}>Email</span>
           </Button>
-        </OutboundLink>
+        </a>
       </div>
     );
   }

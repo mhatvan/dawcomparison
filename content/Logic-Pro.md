@@ -15,7 +15,7 @@ useCase:
   - Mixing
   - Editing
 genre: "Any genre"
-video: "https://www.youtube.com/embed/jjnBjZ9lbp8"
+video: "https://www.youtube-nocookie.com/embed/jjnBjZ9lbp8"
 website: "https://www.apple.com/logic-pro"
 pros:
   - Beginner friendly

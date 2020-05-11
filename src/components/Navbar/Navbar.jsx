@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { OutboundLink } from "gatsby-plugin-gtag";
 import { Menu, Drawer, Button } from "antd";
 import "./Navbar.css";
 
@@ -18,14 +17,14 @@ const RightMenu = ({ mode = "horizontal" }) => (
       <Link to="/vst-comparison">VST Comparison</Link>
     </Menu.Item> */}
     <Menu.Item key="github">
-      <OutboundLink
+      <a
         href="https://github.com/mhatvan/dawcomparison"
         target="_blank"
         rel="noopener noreferrer"
       >
         Github
         {/* <FontAwesomeIcon icon={faGithub} style={{ width: 14 }} /> */}
-      </OutboundLink>
+      </a>
     </Menu.Item>
   </Menu>
 );

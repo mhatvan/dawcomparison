@@ -16,7 +16,7 @@ useCase:
   - Mixing
   - Editing
 genre: "EDM"
-video: "https://www.youtube.com/embed/FiUpCTZ_Lk8"
+video: "https://www.youtube-nocookie.com/embed/FiUpCTZ_Lk8"
 website: "https://www.presonus.com/products/Studio-One"
 pros:
   - a

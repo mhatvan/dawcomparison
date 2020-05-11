@@ -1,5 +1,4 @@
 import { Link } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-gtag";
 import React from "react";
 import { Table } from "antd";
 import { joinByColon } from "../../helpers/utils";
@@ -82,9 +81,9 @@ export const DawTable = ({ posts }) => {
       dataIndex: "website",
       key: "website",
       render: (text) => (
-        <OutboundLink href={text} target="_blank" rel="noopener noreferrer">
+        <a href={text} target="_blank" rel="noopener noreferrer">
           {text}
-        </OutboundLink>
+        </a>
       ),
     },
   ];
