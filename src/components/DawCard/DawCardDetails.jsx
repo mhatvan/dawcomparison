@@ -13,10 +13,10 @@ import { joinByColon } from "../../helpers/utils";
 
 const { Text } = Typography;
 
-export const IconAndText = ({ icon, text }) => {
+export const IconAndText = ({ icon, text, textColor = "" }) => {
   return (
     <div>
-      <Text>
+      <Text style={{ color: textColor }}>
         <span className="logo-text-wrapper">
           <FontAwesomeIcon icon={icon} />
         </span>

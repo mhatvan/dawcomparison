@@ -22,7 +22,7 @@ pros:
   - Live functionality
   - MIDI macros across plugins
 cons:
-  - Stock plugins
+  - Pricey compared to other DAWs
 plugin:
   - VST
   - AU
@@ -31,11 +31,21 @@ interface:
   - Core Audio
 ---
 
-## What is Ableton Live
+## Perfect for live sets
 
-Ableton Live lets you easily create, produce and perform music within one intuitive interface. Live keeps everything in sync and works in real-time, so you can play and modify your musical ideas without interrupting the creative flow.
+Ableton Live can be used in a lot of ways, you can see it being used by:
 
-Live comes with a versatile collection of instruments, sounds, kits and loops for creating any kind of music and provides a full complement of effects to tweak and process your sound.
+- DJs at live sets
+- bands recording their performance
+- bedroom producers working on their music productions
+
+With its versatile collection of instruments, sounds, kits and loops out of the box, you can use it for creating any kind of music.
+
+Currently, you can get Ableton Live in 3 different versions:
+
+- Intro
+- Standard
+- Suite
 
 ### Ableton Live 10 Suite includes
 

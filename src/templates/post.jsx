@@ -82,7 +82,11 @@ export default class PostTemplate extends React.Component {
                     post.pros.map((pro) => {
                       return (
                         <div key={pro}>
-                          <IconAndText icon={faPlusCircle} text={pro} />
+                          <IconAndText
+                            icon={faPlusCircle}
+                            text={pro}
+                            textColor="green"
+                          />
                         </div>
                       );
                     })}
@@ -92,7 +96,11 @@ export default class PostTemplate extends React.Component {
                     post.cons.map((con) => {
                       return (
                         <div key={con}>
-                          <IconAndText icon={faMinusCircle} text={con} />
+                          <IconAndText
+                            icon={faMinusCircle}
+                            text={con}
+                            textColor="red"
+                          />
                         </div>
                       );
                     })}

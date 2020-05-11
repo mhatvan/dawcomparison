@@ -1,16 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import CookieConsent from "react-cookie-consent";
 import config from "../../data/SiteConfig";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import CookiePrompt from "../components/CookiePrompt/CookiePrompt";
 
 import "./index.scss";
-
-const handleAcceptCookies = () => {
-  document.cookie = `gdpr-analytics-enabled=true;path=${location.pathname}`;
-  window.trackGoogleAnalytics();
-};
 
 export default class MainLayout extends React.Component {
   render() {
@@ -27,16 +22,7 @@ export default class MainLayout extends React.Component {
         </div>
         <Footer config={config} />
 
-        <CookieConsent
-          buttonText="Accept"
-          enableDeclineButton
-          declineButtonText="Decline"
-          declineCookieValue={false}
-          cookieName="gdpr-analytics-enabled"
-          onAccept={handleAcceptCookies}
-        >
-          This site uses cookies
-        </CookieConsent>
+        <CookiePrompt />
       </>
     );
   }
