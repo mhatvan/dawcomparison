@@ -3,8 +3,10 @@ import { Typography, Button, message, Space } from "antd";
 
 const handleGaOptOut = () => {
   try {
-    window.gaOptout();
-    message.success("Successfully deactivated Google Analytics!");
+    if (typeof window !== `undefined`) {
+      window.gaOptout();
+      message.success("Successfully deactivated Google Analytics!");
+    }
   } catch (error) {
     message.error("Deactivating Google Analytics failed");
   }

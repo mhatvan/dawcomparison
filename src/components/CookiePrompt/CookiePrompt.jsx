@@ -8,27 +8,29 @@ const CookiePrompt = () => {
   };
 
   const hasDNTEnabled = () => {
-    if (
-      window.doNotTrack ||
-      navigator.doNotTrack ||
-      navigator.msDoNotTrack ||
-      "msTrackingProtectionEnabled" in window.external
-    ) {
-      // The browser supports Do Not Track!
-
+    if (typeof window !== `undefined`) {
       if (
-        window.doNotTrack == "1" ||
-        navigator.doNotTrack == "yes" ||
-        navigator.doNotTrack == "1" ||
-        navigator.msDoNotTrack == "1" ||
-        window.external.msTrackingProtectionEnabled()
+        window.doNotTrack ||
+        navigator.doNotTrack ||
+        navigator.msDoNotTrack ||
+        "msTrackingProtectionEnabled" in window.external
       ) {
-        // Do Not Track is enabled!
-        return true;
+        // The browser supports Do Not Track!
+
+        if (
+          window.doNotTrack == "1" ||
+          navigator.doNotTrack == "yes" ||
+          navigator.doNotTrack == "1" ||
+          navigator.msDoNotTrack == "1" ||
+          window.external.msTrackingProtectionEnabled()
+        ) {
+          // Do Not Track is enabled!
+          return true;
+        }
+      } else {
+        // Do Not Track is not supported
+        return false;
       }
-    } else {
-      // Do Not Track is not supported
-      return false;
     }
   };
 
