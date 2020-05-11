@@ -1,5 +1,5 @@
-const urljoin = require("url-join");
 const path = require("path");
+const urljoin = require("url-join");
 const config = require("./data/SiteConfig");
 
 module.exports = {

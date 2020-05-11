@@ -50,7 +50,9 @@ export default class PostTemplate extends React.Component {
                 />
               </div>
             }
-            actions={[<SocialLinks postPath={slug} postNode={postNode} />]}
+            actions={[
+              <SocialLinks key={0} postPath={slug} postNode={postNode} />,
+            ]}
           >
             <Card.Meta
               title={

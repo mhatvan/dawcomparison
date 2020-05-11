@@ -17,9 +17,9 @@ import {
   Card,
   Alert,
 } from "antd";
+import Image from "../Image";
 import { DAWCardDetails } from "./DawCardDetails";
 import { DawTable } from "./DawTable";
-import Image from "../Image";
 
 const DawCard = ({ postEdges }) => {
   const [query, setQuery] = useState("");
@@ -288,8 +288,10 @@ const DawCard = ({ postEdges }) => {
                     cover={
                       <Image src={post.cover.slice(1)} alt="DAW preview" />
                     }
+                    className="cardBoxShadow"
                     actions={[
                       <OutboundLink
+                        key={0}
                         href={post.website}
                         className="card-footer-item"
                         target="_blank"

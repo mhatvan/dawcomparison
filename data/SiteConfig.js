@@ -6,6 +6,7 @@ const config = {
   siteUrl: "https://dawcomparison.netlify.app", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links.
   siteDescription:
+    // eslint-disable-next-line max-len
     "Compare digital audio workstations for music production that are available on the market. We display a breakdown of the pros & cons different DAWs offer.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssTitle: "DAW Comparison RSS feed", // Title of the RSS feed
