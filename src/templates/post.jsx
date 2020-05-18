@@ -14,7 +14,6 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import Disqus from "../components/Disqus/Disqus";
 import Image from "../components/Image";
 
-import "./b16-tomorrow-dark.css";
 import "./post.css";
 
 export default class PostTemplate extends React.Component {
@@ -67,12 +66,11 @@ export default class PostTemplate extends React.Component {
                   by {post.maker}
                 </>
               }
-              description={
-                <>
-                  <DAWCardDetails post={post} />
-                </>
-              }
+              description={<DAWCardDetails post={post} />}
             />
+            <br />
+
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <br />
 
             <Card type="inner" title="Pros & Cons">
@@ -108,9 +106,6 @@ export default class PostTemplate extends React.Component {
               </Row>
             </Card>
 
-            <br />
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-
             <div className="logo-wrapper">
               <Image src={post.logo.slice(1)} alt="DAW logo" />
             </div>
@@ -123,7 +118,6 @@ export default class PostTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {

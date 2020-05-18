@@ -6,7 +6,7 @@ cover: "/images/bitwig-studio.png"
 logo: "/logos/bitwig-studio.png"
 date: "2020-05-05"
 slug: "bitwig"
-price: "$410"
+price: "$399"
 os:
   - Windows
   - macOS
@@ -20,10 +20,10 @@ genre: "Any genre"
 video: "https://www.youtube-nocookie.com/embed/Nfv5Lvi9w-w"
 website: "https://www.bitwig.com/en/home.html"
 pros:
-  - a
-  - b
+  - Modular sound design lets you tweak sounds with maximum flexibility
+  - Touch integration with gesture identification
 cons:
-  - c
+  - Cannot change bpm mid-project
 plugin:
   - VST
 interface:
@@ -31,19 +31,15 @@ interface:
   - Core Audio
 ---
 
-# Industry standard DAW running on DSP cards for greater power and stability
+## Super-fast workflow for all your needs
 
-## Mendaci pinu ipsi nunc
+Create world-class sound with great control over every aspect of your production.
 
-Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
-tardius pello ostentare; dixit. [Agit](http://accessit.net/) super, cum, qua
-quae pinxit certamine occulte causa: est est non. Dubita fictumque imagine.
+The colorful and appealing interface
+Similar to Ableton Live, Bitwig Studio's main use case is to be used for live performances.
 
-Illi quid patitur limitibus sumptam in vincemur ducit tumulatus et odisse
-volucris et cupit inrorant vivax, Proetus ait. Nec induit mortalia olim ortus
-foedera [praecipitem](http://www.pontumferae.io/protinuset.html) amans et iter
-[est](http://casuquefuit.io/murmurevestrum.aspx) huc virginitate spernimus
-Oenopiis longi ore paretur? Sede ore quaedam dumque. Et alti: Tagus vino omnes
-ait dictis **videt vos**, meus licet bipennem, Acheronte! Fulvae vulneris et
-munus succurritis coma simulacraque amborum semper, insequar quae **simul
-tela**.
+With over 10GB of sound content that comes prepacked with Bitwig Studio, you can experiment and tweak endlessly.
+
+## Enjoy fully-modular sound design
+
+With its newest version 3, Bitwig Studio introduced an open modular environment where you can add a "Grid" device to your project that lets you patch anything anywhere.

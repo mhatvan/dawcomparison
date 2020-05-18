@@ -15,6 +15,10 @@
     align-items: center;
     flex-direction: column-reverse;
   }
+
+  #copyright {
+    padding: 15px 0;
+  }
 }
 
 .ant-menu-horizontal {

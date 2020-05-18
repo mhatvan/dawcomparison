@@ -1,4 +1,4 @@
-import { Typography, Menu, Space, Button, Col } from "antd";
+import { Typography, Menu, Space, Col } from "antd";
 import { Link } from "gatsby";
 import React from "react";
 import "./Footer.css";
@@ -6,19 +6,9 @@ import "./Footer.css";
 const Footer = ({ config }) => {
   return (
     <footer className="footer">
-      <Col xs={24} md={12}>
+      <Col xs={24} md={12} id="copyright">
         <Space size="large">
           <Typography.Text>{config.copyright}</Typography.Text>
-
-          <Button>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.buymeacoffee.com/mhatvan"
-            >
-              Buy me a coffee
-            </a>
-          </Button>
         </Space>
       </Col>
       <Col xs={24} md={12} style={{ textAlign: "right" }}>

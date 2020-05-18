@@ -239,7 +239,7 @@ const DawCard = ({ postEdges }) => {
         </Col>
       </Row>
       <Row gutter={[16, 16]} align="middle">
-        <Col xs={12}>
+        <Col xs={16}>
           <Tag color="blue">
             Displaying{" "}
             <b>{activeFiltering ? filteredData.length : postList.length} </b>
@@ -247,7 +247,7 @@ const DawCard = ({ postEdges }) => {
           </Tag>
         </Col>
 
-        <Col xs={12} style={{ textAlign: "right" }}>
+        <Col xs={8} style={{ textAlign: "right" }}>
           <Button.Group>
             <Button
               onClick={() => changeViewMode("card")}
@@ -344,9 +344,10 @@ const DawCard = ({ postEdges }) => {
               <Alert
                 message={
                   <>
-                    Didn&#39;t find the DAW you were looking for? Write me on{" "}
+                    Didn&#39;t find the DAW you were looking for or found a bug?
+                    Write me on{" "}
                     <a
-                      href="https://github.com/mhatvan"
+                      href="https://github.com/mhatvan/dawcomparison/issues/new"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

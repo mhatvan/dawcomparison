@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 const Image = ({ src, ...props }) => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
+      allFile(filter: { absolutePath: { regex: "/images|logos/" } }) {
         edges {
           node {
             relativePath

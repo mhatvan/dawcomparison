@@ -13,13 +13,17 @@ os:
   - Linux
 useCase:
   - Recording
+  - Editing
 genre: "Any genre"
 video: "https://www.youtube-nocookie.com/embed/LQ7n9pA0qc0"
 website: "https://www.audacityteam.org/"
 pros:
-  - Free tool for recording audio
+  - Free tool mainly for recording audio
+  - Available for all major operating systems
+  - Open-source
 cons:
-  - Not really useful for music production
+  - Not a full-blown DAW for music production
+  - User interface takes some time to get used to
 plugin:
   - VST
 interface:
@@ -27,19 +31,21 @@ interface:
   - WDM
 ---
 
-# Industry standard DAW running on DSP cards for greater power and stability
+## Get your feet wet with Audacity
 
-## Mendaci pinu ipsi nunc
+With this light-weight audio software, you can benefit from fast and
+intuitive audio editing, recording and even effect plugin support.
 
-Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
-tardius pello ostentare; dixit. [Agit](http://accessit.net/) super, cum, qua
-quae pinxit certamine occulte causa: est est non. Dubita fictumque imagine.
+Audacity provides you with a lot of functionality and excellent sound quality which supports 16, 24 and 32-bit sample rates and formats are converted with high-quality resampling and dithering.
 
-Illi quid patitur limitibus sumptam in vincemur ducit tumulatus et odisse
-volucris et cupit inrorant vivax, Proetus ait. Nec induit mortalia olim ortus
-foedera [praecipitem](http://www.pontumferae.io/protinuset.html) amans et iter
-[est](http://casuquefuit.io/murmurevestrum.aspx) huc virginitate spernimus
-Oenopiis longi ore paretur? Sede ore quaedam dumque. Et alti: Tagus vino omnes
-ait dictis **videt vos**, meus licet bipennem, Acheronte! Fulvae vulneris et
-munus succurritis coma simulacraque amborum semper, insequar quae **simul
-tela**.
+### Open-source and free by default
+
+One of the upsides of Audacity is the chance to contribute to the project yourself due to its open-source nature and you can check in on the progress of the development yourself whenever you want on [Github](https://github.com/audacity/audacity) or even request features yourself. With around ~100 contributors you can be sure that development will be going continously fast and steady.
+
+### Great for various use cases
+
+As long time contender in the audio software business since its initial release in 2000, it is especially popular amongst users who need a reliant tool for voice-overs on podcasts, narrations for videos, journalism and more. Audacity is geared towards novice users which are specialized in other areas than audio and just need to get a task done quick.
+
+#### Notice
+
+Be aware that editing changes of a `.wav` file will result in changing the original file, so make sure to work on a copy before hacking away.

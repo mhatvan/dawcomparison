@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./UserLinks.css";
 import { Button } from "antd";
@@ -20,6 +20,19 @@ class UserLinks extends Component {
             style={{ marginRight: 5 }}
           >
             <span style={{ marginLeft: 5 }}>GitHub</span>
+          </Button>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/markus-hatvan-b912b91aa/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            type="primary"
+            icon={<FontAwesomeIcon icon={faLinkedin} />}
+            style={{ marginRight: 5 }}
+          >
+            <span style={{ marginLeft: 5 }}>LinkedIn</span>
           </Button>
         </a>
         <a href="mailto:markus_hatvan@aon.at">

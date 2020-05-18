@@ -94,7 +94,7 @@ export const DawTable = ({ posts }) => {
       columns={columns}
       pagination={false}
       bordered
-      style={{ width: "100%", overflowX: "auto" }}
+      style={{ width: "100%", overflowX: "auto", background: "white" }}
     />
   );
 };
