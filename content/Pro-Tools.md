@@ -11,7 +11,6 @@ os:
   - Windows
   - macOS
 useCase:
-  - Songwriting
   - Recording
   - Mixing
   - Editing
@@ -26,6 +25,7 @@ cons:
   - Learning curve
   - Piano roll and music production tools
   - UI needs some polishing
+  - Required iLok dongle for copy protection
 plugin:
   - AAX Native
 interface:

@@ -6,9 +6,10 @@ cover: "/images/flstudio.jpg"
 logo: "/logos/flstudio.jpg"
 date: "2020-05-05"
 slug: "fl-studio"
-price: "$599"
+price: "$200"
 os:
   - Windows
+  - macOS
 useCase:
   - Songwriting
   - Mixing
@@ -17,31 +18,34 @@ genre: "EDM"
 video: "https://www.youtube-nocookie.com/embed/AuqqiuaLYJA"
 website: "https://www.image-line.com/flstudio/"
 pros:
-  - a
-  - b
+  - Popular amongst beginners
+  - Lifetime free upgrades
+  - Easy to use
 cons:
-  - c
+  - Basic mixer interface
+  - Lacks recording features
+  - Inferior stock plugins
 plugin:
   - VST
 interface:
   - ASIO
 ---
 
-# NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents
+## More than 20 years of innovative sound
 
-## Mendaci pinu ipsi nunc
+FL Studio is one of the first choices for many EDM bedroom producers and gained popularity amongst big scene names like Martin Garrix, Oliver Heldens and many more. Due to its high amount of users, you will find that collaborating with other producers is a breeze.
 
-Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
-tardius pello ostentare; dixit. [Agit](http://accessit.net/) super, cum, qua
-quae pinxit certamine occulte causa: est est non. Dubita fictumque imagine.
+## Fast workflow and unbeatable ease of use
 
-Illi quid patitur limitibus sumptam in vincemur ducit tumulatus et odisse
-volucris et cupit inrorant vivax, Proetus ait. Nec induit mortalia olim ortus
-foedera [praecipitem](http://www.pontumferae.io/protinuset.html) amans et iter
-[est](http://casuquefuit.io/murmurevestrum.aspx) huc virginitate spernimus
-Oenopiis longi ore paretur? Sede ore quaedam dumque. Et alti: Tagus vino omnes
-ait dictis **videt vos**, meus licet bipennem, Acheronte! Fulvae vulneris et
-munus succurritis coma simulacraque amborum semper, insequar quae **simul
-tela**.
+One of FL Studio's biggest USPs is definitely the "best piano roll in the business". With a wide variety of editing tools for efficient sequencing, it will surprise you and boost your production speed by a lot. Armed with a handy sidebar, you can quickly drag and drop samples into the project to your needs.
 
-<pre><code>ergerg</code></pre>
+## Extend your music production possibilities with FL Studio Mobile
+
+Whenever you are on the go and a creativity spike hits you, FL Studio Mobile enables you work with high quality synthesizers and samples or even capture live performances.
+
+### Currently, you can get FL Studio 20 in four different versions
+
+- Fruity Edition (\$100)
+- Producer Edition (\$200)
+- Signature Bundle (\$320)
+- ALL Plugins Bundle (\$900)

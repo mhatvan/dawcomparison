@@ -6,7 +6,7 @@ cover: "/images/cubase.png"
 logo: "/logos/cubase.png"
 date: "2020-05-05"
 slug: "cubase"
-price: "$599"
+price: "$640"
 os:
   - Windows
   - macOS
@@ -19,10 +19,12 @@ genre: "Any genre"
 video: "https://www.youtube-nocookie.com/embed/lSZ8yX1viV8"
 website: "https://www.steinberg.net/en/home.html"
 pros:
-  - a
-  - b
+  - Great allrounder
+  - Extensive mixer functionality
+  - Batch export tracks
 cons:
-  - c
+  - e-Licenser based hardware copy protection
+  - Quite expensive
 plugin:
   - VST
 interface:
@@ -30,19 +32,20 @@ interface:
   - Core Audio
 ---
 
-# Cubase has been around for a long time and remains popular to this day. It’s innovative, trustworthy and stable
+## Cubase has been around for a long time due to its stability and trustworthiness
 
-## Mendaci pinu ipsi nunc
+Supported and used by many big name producers like Hans Zimmer and Tiësto, Cubase can convince its userbase with an intuitive MIDI engine and great stability. The amount of world-class stock plugins give you options out of the box for serious mixing and composition work.
 
-Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
-tardius pello ostentare; dixit. [Agit](http://accessit.net/) super, cum, qua
-quae pinxit certamine occulte causa: est est non. Dubita fictumque imagine.
+### Turn your ideas into music
 
-Illi quid patitur limitibus sumptam in vincemur ducit tumulatus et odisse
-volucris et cupit inrorant vivax, Proetus ait. Nec induit mortalia olim ortus
-foedera [praecipitem](http://www.pontumferae.io/protinuset.html) amans et iter
-[est](http://casuquefuit.io/murmurevestrum.aspx) huc virginitate spernimus
-Oenopiis longi ore paretur? Sede ore quaedam dumque. Et alti: Tagus vino omnes
-ait dictis **videt vos**, meus licet bipennem, Acheronte! Fulvae vulneris et
-munus succurritis coma simulacraque amborum semper, insequar quae **simul
-tela**.
+There are no limits to what you can do with Cubase. Creating musical sequences, recording vocalists or instruments, mixing and mastering multi-track projects, it all works intuitively without hickups. Even basic sound editing to a video track is possible.
+
+### Opt-in for Cubasis
+
+If Cubase alone doesn't offer you enough flexibility, you can purchase its companion tablet app for recording, editing and mixing on an iPad.
+
+### Currently, you can get Cubase 10.5 in three different versions
+
+- Elements (\$110)
+- Artist (\$360)
+- Pro (\$640)

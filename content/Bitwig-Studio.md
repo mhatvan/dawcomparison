@@ -16,14 +16,17 @@ useCase:
   - Recording
   - Mixing
   - Editing
-genre: "Any genre"
+genre: "EDM"
 video: "https://www.youtube-nocookie.com/embed/Nfv5Lvi9w-w"
 website: "https://www.bitwig.com/en/home.html"
 pros:
   - Modular sound design lets you tweak sounds with maximum flexibility
   - Touch integration with gesture identification
+  - Fun interface
+  - Cross platform and highly compatible
 cons:
   - Cannot change bpm mid-project
+  - Small community and underground
 plugin:
   - VST
 interface:
@@ -33,13 +36,16 @@ interface:
 
 ## Super-fast workflow for all your needs
 
-Create world-class sound with great control over every aspect of your production.
+Similar to Ableton Live, Bitwig Studio's main use case is to be used for live performances. The colorful and appealing interface provides great user experience for mixing and editing tunes while interacting with the crowd.
 
-The colorful and appealing interface
-Similar to Ableton Live, Bitwig Studio's main use case is to be used for live performances.
+### Enjoy fully-modular sound design
 
-With over 10GB of sound content that comes prepacked with Bitwig Studio, you can experiment and tweak endlessly.
+With its newest version 3, Bitwig Studio introduced a highly praised open modular environment where you can add a "Grid" device to your project that lets you patch anything anywhere.
 
-## Enjoy fully-modular sound design
+### Use modern expressive controllers
 
-With its newest version 3, Bitwig Studio introduced an open modular environment where you can add a "Grid" device to your project that lets you patch anything anywhere.
+Although Bitwig Studio is a younger and smaller project than most other DAWs on the market, it can excite with support for MIDI - MPE devices incuding Seaboard, Linnstrument, Continuum and many more. Should you ever come into the situation that you run into a crash, you can be at ease because all plugins are sandboxed which prevent the system from going downhill completely.
+
+### Create world-class sound with great control over every aspect of your production
+
+With over 10GB of sound content that comes prepacked with Bitwig Studio, you can experiment and tweak endlessly. One of Bitwig Studio's USPs is definitely the fact, that it is one of the only DAWs that supports all 3 major operating systems, which could help gain some traction amongst the Linux community.

@@ -18,10 +18,12 @@ genre: "Any genre"
 video: "https://www.youtube-nocookie.com/embed/8PVxIqeDZ7U"
 website: "https://www.cakewalk.com/products/SONAR/"
 pros:
-  - a
-  - b
+  - Great plugins
+  - Compatible with touchscreens
+  - Frequent updates
 cons:
-  - c
+  - Change of ownership
+  - Windows only
 plugin:
   - VST
   - DX
@@ -30,19 +32,14 @@ interface:
   - WDM
 ---
 
-# Industry standard DAW running on DSP cards for greater power and stability
+## Cakewalk is back
 
-## Mendaci pinu ipsi nunc
+After BandLab Technologies acquired the intellectual property of SONAR's Cakewalk Inc. in 2018, they relaunched Cakewalk as free-to-download and continued development and adding features. Amazing things do happen!
 
-Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
-tardius pello ostentare; dixit. [Agit](http://accessit.net/) super, cum, qua
-quae pinxit certamine occulte causa: est est non. Dubita fictumque imagine.
+### Precision audio technology
 
-Illi quid patitur limitibus sumptam in vincemur ducit tumulatus et odisse
-volucris et cupit inrorant vivax, Proetus ait. Nec induit mortalia olim ortus
-foedera [praecipitem](http://www.pontumferae.io/protinuset.html) amans et iter
-[est](http://casuquefuit.io/murmurevestrum.aspx) huc virginitate spernimus
-Oenopiis longi ore paretur? Sede ore quaedam dumque. Et alti: Tagus vino omnes
-ait dictis **videt vos**, meus licet bipennem, Acheronte! Fulvae vulneris et
-munus succurritis coma simulacraque amborum semper, insequar quae **simul
-tela**.
+Never worry about audio quality again: Cakewalk offers you clean, dynamic and accurate mixes through its advanced 64-bit mix engine and provides you with the highest quality audio possible with resampling plugins. With excellent built-in mastering tools, you can polish your finished mix and directly export and publish it to various channels including SoundCloud, YouTube and many more.
+
+### Awarded as best classroom technlogy
+
+With its target group not only being electronic music producers, BandLab for Education branches out and empowers students and teachers with a cloud-based platform that works seamlessly across platforms. Marketed also as social music creation platform, BandLab is even available for iOS and Android and therefore delivers a solid product for very different user needs.

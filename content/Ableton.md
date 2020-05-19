@@ -49,7 +49,7 @@ Ableton Live can convince its users with a clean and easy-to-use design and trac
 
 With the biggest usage share coming from bedroom producers for EDM music, it definitely deserves its space as favorite DAW that a lot of producers choose without ever looking back.
 
-### Currently, you can get Ableton Live in 3 different versions
+### Currently, you can get Ableton Live in three different versions
 
 - Intro (\$85)
 - Standard (\$380)
