@@ -11,42 +11,57 @@ class About extends Component {
         <Typography.Title>About</Typography.Title>
         <Typography.Paragraph>
           This open-source and non-profit project is meant to help out bedroom
-          producers, audiophile hobbyists & bands who are just starting out to
-          find the perfect digital audio workstation (DAW) for their use case.
+          producers, audiophile hobbyists & new bands who are just starting out
+          to find the perfect digital audio workstation (DAW) for their use
+          case.
         </Typography.Paragraph>
-        <Typography.Paragraph>
-          It is a win-win situation: I want to learn about{" "}
-          <a href="https://www.gatsbyjs.org/">Gatsby</a>, visitors of the
-          website can gather information and the companies behind the DAWs get
-          free promotion.
-        </Typography.Paragraph>
+
+        <Typography.Title level={2}>The problem</Typography.Title>
+
         <Typography.Paragraph>
           Since I started producing electronic music a couple years ago, I was
           interested in trying and checking out new tools like DAWs or VSTs.
-        </Typography.Paragraph>
-        <Typography.Paragraph>
-          The website provides an easy way of filtering content based on DAW
-          title, price and more options to compare the various available DAWs.
+          Most resources that you find on the web are reviews and pros & cons
+          lists which are outdated by a year or more the moment you read it.
+          This can give you a wrong impression because you might be reading
+          about missing features that have already been added in the meantime or
+          bugs that have been fixed.
         </Typography.Paragraph>
 
-        <Typography.Title level={4}>
+        <Typography.Title level={2}>The solution</Typography.Title>
+
+        <Typography.Paragraph>
+          My vision is that the content is crowd-sourced and therefore always up
+          to date and helpful to visitors of the site. It is a win-win
+          situation: I want to learn about{" "}
+          <a href="https://www.gatsbyjs.org/">Gatsby</a>, visitors of the
+          website can gather information and the companies behind the DAWs get
+          free promotion. The website provides an easy way of filtering content
+          based on DAW title, price and more options to compare the various
+          available DAWs.
+        </Typography.Paragraph>
+
+        <Typography.Title level={2}>
           Interested in contributing to the content or adding new features?
         </Typography.Title>
 
         <Typography.Paragraph>
-          Just open a pull request or start a new feature request for{" "}
+          I am not a content writer and never intended to be. There certainly
+          are unintended mistakes within the DAW marketing texts that I
+          apologize for. When you find an issue, just open a pull request or
+          start a new feature request for{" "}
           <a
             href="https://github.com/mhatvan/dawcomparison"
             target="_blank"
             rel="noopener noreferrer"
           >
             DAW Comparison
-          </a>
-          , or contact me through the channels below:
+          </a>{" "}
+          or contact me through the channels below:
+          <UserLinks config={config} labeled />
         </Typography.Paragraph>
 
-        <UserLinks config={config} labeled />
-        <Typography.Title level={4} style={{ marginTop: 30 }}>
+        <Typography.Title level={4}>
           If you liked the content, a tip would be awesome!
         </Typography.Title>
         <Typography.Paragraph>

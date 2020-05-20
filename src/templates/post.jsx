@@ -29,7 +29,7 @@ export default class PostTemplate extends React.Component {
     return (
       <Layout>
         <Helmet>
-          <title>{`${post.maker} ${post.version} by ${post.title} | ${config.siteTitle}`}</title>
+          <title>{`${post.title} ${post.version} by ${post.maker} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="container">

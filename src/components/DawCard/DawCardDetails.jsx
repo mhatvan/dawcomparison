@@ -18,7 +18,10 @@ export const IconAndText = ({ icon, text, textColor = "" }) => {
     <div>
       <Text style={{ color: textColor }}>
         <span className="logo-text-wrapper">
-          <FontAwesomeIcon icon={icon} />
+          <FontAwesomeIcon
+            icon={icon}
+            style={{ color: textColor || "#1890ff" }}
+          />
         </span>
         {text}
       </Text>

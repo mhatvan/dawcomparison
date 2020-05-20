@@ -21,10 +21,12 @@ genre: "Any genre"
 video: "https://www.youtube-nocookie.com/embed/GG-ceH6fLw4"
 website: "https://new.steinberg.net/nuendo/"
 pros:
-  - a
-  - b
+  - Focused in depth on game audio, film and TV
+  - Many large companies rely and trust Nuendo
+  - Customizable workflow
 cons:
-  - c
+  - Price could be a no-go for many potential users
+  - e-Licenser based hardware copy protection
 plugin:
   - VST
 interface:
@@ -32,19 +34,20 @@ interface:
   - Core Audio
 ---
 
-# Industry standard DAW running on DSP cards for greater power and stability
+## Most advanced audio post-production solution on the market
 
-## Mendaci pinu ipsi nunc
+Although Steinberg Nuendo's main target groups include companies which deal with game audio, post-production for film and TV, it is a powerful tool to work with music production as well. Out of the box, you can profit from a great number of musical effects built in and VST instruments such as HALion Sonic SE 3 and Retrologue 2.
 
-Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
-tardius pello ostentare; dixit. [Agit](http://accessit.net/) super, cum, qua
-quae pinxit certamine occulte causa: est est non. Dubita fictumque imagine.
+### Create immersive audio experience without any hassle
 
-Illi quid patitur limitibus sumptam in vincemur ducit tumulatus et odisse
-volucris et cupit inrorant vivax, Proetus ait. Nec induit mortalia olim ortus
-foedera [praecipitem](http://www.pontumferae.io/protinuset.html) amans et iter
-[est](http://casuquefuit.io/murmurevestrum.aspx) huc virginitate spernimus
-Oenopiis longi ore paretur? Sede ore quaedam dumque. Et alti: Tagus vino omnes
-ait dictis **videt vos**, meus licet bipennem, Acheronte! Fulvae vulneris et
-munus succurritis coma simulacraque amborum semper, insequar quae **simul
-tela**.
+Steinberg Nuendo 10 features new plugins such as "VoiceDesigner", which can be helpful when trying to create nightmarish sounding vocals for e.g. Metal or Dubstep and the "Doppler" plugin, which will certainly catch the listeners attention when applied onto a synth or a pad sound.
+
+### Differences to Cubase
+
+When compared to the other well-known DAW from Steinberg called "Cubase", Nuendo supports a higher audio resolution of up to 384 kHz and up to 22.2 True Multichannel Audio Path surround sound. Additionally, it packs more effect plugins and enables advanced post production/ game-audio and dialog editing features naturally. If you've used Cubase before, you will be able to get in the groove fast, since the Steinberg team made both UI interfaces look consistently similar.
+
+### Currently, you can get Steinberg Nuendo in three different versions
+
+- Full version Education - Student (\$526)
+- Full version Education - Educator (\$640)
+- Full version (\$1100)

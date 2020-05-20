@@ -6,7 +6,7 @@ cover: "/images/bitwig-studio.png"
 logo: "/logos/bitwig-studio.png"
 date: "2020-05-05"
 slug: "bitwig"
-price: "$399"
+price: "$400"
 os:
   - Windows
   - macOS

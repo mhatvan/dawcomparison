@@ -146,10 +146,11 @@ const DawCard = ({ postEdges }) => {
 
   const marks = {
     0: "free",
+    250: "$250",
     500: "$500",
+    750: "$750",
     1000: "$1000",
-    1500: "$1500",
-    2000: "$2000",
+    1250: "$1250",
   };
 
   const changeViewMode = (mode) => {
@@ -232,8 +233,8 @@ const DawCard = ({ postEdges }) => {
             step={null}
             marks={marks}
             min={0}
-            max={2000}
-            defaultValue={[0, 2000]}
+            max={1250}
+            defaultValue={[0, 1250]}
             onChange={handlePriceSliderFilter}
           />
         </Col>
