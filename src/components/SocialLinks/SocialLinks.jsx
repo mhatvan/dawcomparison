@@ -31,34 +31,38 @@ class SocialLinks extends Component {
 
     return (
       <div className="social-links">
-        <Typography.Text style={{ marginRight: 5 }}>
-          <strong>If you like the content, share it on:</strong>
-        </Typography.Text>
-        <RedditShareButton url={url} title={post.title}>
-          <RedditIcon round size={iconSize} />
-          <RedditShareCount url={url}>
-            {(count) => renderShareCount(count)}
-          </RedditShareCount>
-        </RedditShareButton>
-        <TwitterShareButton url={url} title={post.title}>
-          <TwitterIcon round size={iconSize} />
-        </TwitterShareButton>
-        <FacebookShareButton url={url} quote={postNode.excerpt}>
-          <FacebookIcon round size={iconSize} />
-          <FacebookShareCount url={url}>
-            {(count) => renderShareCount(count)}
-          </FacebookShareCount>
-        </FacebookShareButton>
-        <LinkedinShareButton
-          url={url}
-          title={post.title}
-          description={postNode.excerpt}
-        >
-          <LinkedinIcon round size={iconSize} />
-        </LinkedinShareButton>
-        <TelegramShareButton url={url}>
-          <TelegramIcon round size={iconSize} />
-        </TelegramShareButton>
+        <div>
+          <Typography.Text style={{ marginRight: 5 }}>
+            <strong>If you like the content, share it on:</strong>
+          </Typography.Text>
+        </div>
+        <div>
+          <RedditShareButton url={url} title={post.title}>
+            <RedditIcon round size={iconSize} />
+            <RedditShareCount url={url}>
+              {(count) => renderShareCount(count)}
+            </RedditShareCount>
+          </RedditShareButton>
+          <TwitterShareButton url={url} title={post.title}>
+            <TwitterIcon round size={iconSize} />
+          </TwitterShareButton>
+          <FacebookShareButton url={url} quote={postNode.excerpt}>
+            <FacebookIcon round size={iconSize} />
+            <FacebookShareCount url={url}>
+              {(count) => renderShareCount(count)}
+            </FacebookShareCount>
+          </FacebookShareButton>
+          <LinkedinShareButton
+            url={url}
+            title={post.title}
+            description={postNode.excerpt}
+          >
+            <LinkedinIcon round size={iconSize} />
+          </LinkedinShareButton>
+          <TelegramShareButton url={url}>
+            <TelegramIcon round size={iconSize} />
+          </TelegramShareButton>
+        </div>
       </div>
     );
   }

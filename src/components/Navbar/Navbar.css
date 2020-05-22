@@ -1,7 +1,6 @@
 .navbar {
   font-family: "Roboto";
   display: flex;
-  /* padding: 0 15px; */
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
@@ -12,7 +11,7 @@
   left: 0;
   position: fixed;
   right: 0;
-  z-index: 30;
+  z-index: 1070;
   background: white;
 }
 
@@ -38,4 +37,8 @@
 .ant-menu-vertical,
 .ant-menu-vertical-left {
   border-right: unset !important;
+}
+
+.ant-drawer-header {
+  padding: 0 !important;
 }

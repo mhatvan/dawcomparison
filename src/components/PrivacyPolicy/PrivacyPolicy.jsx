@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Typography, Button, message, Space } from "antd";
+import "./PrivacyPolicy.css";
 
 const handleGaOptOut = () => {
   try {

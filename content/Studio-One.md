@@ -19,10 +19,10 @@ genre: "EDM"
 video: "https://www.youtube-nocookie.com/embed/FiUpCTZ_Lk8"
 website: "https://www.presonus.com/products/Studio-One"
 pros:
-  - a
-  - b
+  - Popular due to its efficient workflow
+  - Powerful Chord Selector plugin
 cons:
-  - c
+  - Restricted to one-window interface
 plugin:
   - VST
   - AU
@@ -30,6 +30,14 @@ interface:
   - ASIO
   - Core Audio
 ---
+
+## Create without boundaries, produce without limits
+
+PreSonus Studio One 4 feels snappy and excels at delivering customers what they ask for. It is a first choice option for many producers to explore new creative possibilities.
+
+### Improve your chord progressions
+
+Since version 4, there is a Chord Selector plugin included, which can help you with real-time chord selecting and processing, in case you are not professionally trained in music theory.
 
 ### Currently, you can get Studio One in three different versions
 

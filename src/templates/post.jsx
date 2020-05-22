@@ -75,7 +75,7 @@ export default class PostTemplate extends React.Component {
 
             <Card type="inner" title="Pros & Cons">
               <Row>
-                <Col span={12}>
+                <Col xs={24} md={12}>
                   {post.pros &&
                     post.pros.map((pro) => {
                       return (
@@ -89,7 +89,7 @@ export default class PostTemplate extends React.Component {
                       );
                     })}
                 </Col>
-                <Col span={12}>
+                <Col xs={24} md={12}>
                   {post.cons &&
                     post.cons.map((con) => {
                       return (

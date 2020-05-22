@@ -8,10 +8,8 @@ class VSTComparisonPage extends Component {
   render() {
     return (
       <Layout>
-        <div className="container">
-          <Helmet title={`VST Comparison | ${config.siteTitle}`} />
-          <VSTComparison />
-        </div>
+        <Helmet title={`VST Comparison | ${config.siteTitle}`} />
+        <VSTComparison />
       </Layout>
     );
   }

@@ -1,7 +1,7 @@
 # DAW Comparison
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/5aa915a2-83dd-4144-8300-4fc58c6fbb3b/deploy-status)](https://app.netlify.com/sites/dawcomparison/deploys)
-<a href="https://www.buymeacoffee.com/mhatvan" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: 100px !important;"></a>
+<a href="https://www.buymeacoffee.com/mhatvan" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: 80px !important;"></a>
 
 Compare and find the ideal DAW for your needs.
 

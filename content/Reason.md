@@ -19,19 +19,30 @@ genre: "Any genre"
 video: "https://www.youtube-nocookie.com/embed/tMh3ZEFyEmo"
 website: "https://www.reasonstudios.com/en/reason"
 pros:
-  - a
-  - b
+  - Unique patch cable and wiring UI
+  - Good-sounding stock instruments and effects
 cons:
-  - c
+  - Can appear intimidating at furst
 plugin:
   - VST
   - AU
+  - AAX
 interface:
   - WDM
   - Core Audio
 ---
 
 ## Make music the way you want
+
+Reason, best known for its unique rack "mount & patch" cable UI, brings you whopping 24GB of sounds & samples out of the box with its Suite version to give you plenty of options when it comes to composing and beat making. The high quality stock instruments, drum loops, samplers and effects with plenty of pre-built patches will make you find your signature sound in no time. Profit from the built-in Audio Pitch Editor, which can easily compete with Melodyne for improving vocal performances easily.
+
+### Connect and customize
+
+With the new Reason Rack plugin, you can easily throw your favorite plugins into the signal chain and use it on sounds inside other DAWs like e.g. FL Studio or Ableton Live. The Rack plugin has flexible I/O - 16 routable stereo outputs, an audio input and sidechain input.
+
+### Rent to own
+
+For maximum flexibility, Reason Rack extensions can be purchased through a rent pricing model of $9.99/mo. So whenever you are short on bucks, you can always rent Reason plugins (which are usually around $99) for a couple months until you own them.
 
 ### Currently, you can get Reason in three different versions
 

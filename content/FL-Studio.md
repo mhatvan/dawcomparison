@@ -1,6 +1,6 @@
 ---
 title: "FL Studio"
-version: "20"
+version: "20.7"
 maker: "Image-Line"
 cover: "/images/flstudio.jpg"
 logo: "/logos/flstudio.jpg"

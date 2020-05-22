@@ -62,7 +62,7 @@ class About extends Component {
         </Typography.Paragraph>
 
         <Typography.Title level={4}>
-          If you liked the content, a tip would be awesome!
+          If you like the content, a tip would be awesome!
         </Typography.Title>
         <Typography.Paragraph>
           <a

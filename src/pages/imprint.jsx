@@ -8,10 +8,8 @@ class ImprintPage extends Component {
   render() {
     return (
       <Layout>
-        <div className="container">
-          <Helmet title={`Imprint | ${config.siteTitle}`} />
-          <Imprint />
-        </div>
+        <Helmet title={`Imprint | ${config.siteTitle}`} />
+        <Imprint />
       </Layout>
     );
   }

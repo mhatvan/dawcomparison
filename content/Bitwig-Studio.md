@@ -49,3 +49,9 @@ Although Bitwig Studio is a younger and smaller project than most other DAWs on 
 ### Create world-class sound with great control over every aspect of your production
 
 With over 10GB of sound content that comes prepacked with Bitwig Studio, you can experiment and tweak endlessly. One of Bitwig Studio's USPs is definitely the fact, that it is one of the only DAWs that supports all 3 major operating systems, which could help gain some traction amongst the Linux community.
+
+### Currently, you can get Bitwig Studio in two different versions
+
+- Bitwig Studio - 16-Track (\$100)
+- Bitwig Studio - Education (\$270)
+- Bitwig Studio - Full (\$400)

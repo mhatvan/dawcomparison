@@ -44,10 +44,10 @@ const CookiePrompt = () => {
           declineCookieValue={false}
           cookieName="gdpr-analytics-enabled"
           onAccept={handleAcceptCookies}
-          style={{ background: "rgba(61,65,66,0.85)" }}
+          style={{ background: "rgba(61,65,66,0.85)", padding: 10 }}
           disableButtonStyles
           buttonClasses="ant-btn"
-          buttonStyle={{ marginRight: 10 }}
+          // buttonStyle={{ margin: "10px 0" }}
           declineButtonStyle={{ marginRight: 10 }}
           declineButtonClasses="ant-btn"
         >
