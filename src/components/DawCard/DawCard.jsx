@@ -282,7 +282,7 @@ const DawCard = ({ postEdges }) => {
                   md={12}
                   lg={12}
                   xl={8}
-                  xxl={6}
+                  xxl={8}
                 >
                   <Card
                     cover={

@@ -38,18 +38,18 @@ interface:
 ## Constant evolution
 
 Reaper can compete with other big name powerhouse DAWs due to its large amount of features and its flexibility.
-It surprises with an extremely tiny download size of 10-20MB, depending on your OS setup and supports a wide variety of different third-party plugin formats.
+It surprises with an extremely tiny download size of only 10-20MB - depending on your OS setup - and you can expect support for a wide variety of different third-party plugin formats.
 
-## Extend, script and modify
+### Extend, script and modify
 
-One USP of Reaper is its customizability. Don't like the look? You can modify the entire UI and color scheme of the interface. Additionally, you can build own menus, toolbars and macros for maximum flexibility. You can also find the SWS extension on the website of Reaper, which is a collaborative and open source project that adds a collection of great features to Reaper.
+A big USP of Reaper is its customizability. Don't like the look? You can modify the entire UI and color scheme of the interface. Additionally, you can build own menus, toolbars and macros for maximum flexibility. You can also find the [SWS extension](http://www.sws-extension.org/) on the website of Reaper, which is a collaborative and open source project that adds a collection of great features to Reaper.
 
 ### Currently, you can get Cockos Reaper in two different versions
 
 - Discounted license (\$60)
 - Commercial license (\$225)
 
-As this website targets mainly beginners in the DAW world who most likely will use Reaper for personal use, you can almost certainly get the discounted license for \$60. You can find the exact requirements for the discounted license on their [website](https://www.reaper.fm/purchase.php).
+As this website targets mainly beginners in the DAW world who most likely will use Reaper for personal use, you can almost certainly be sure to qualify for the discounted license for \$60. You can find the exact requirements for the discounted license on their [website](https://www.reaper.fm/purchase.php).
 
 #### Notice
 

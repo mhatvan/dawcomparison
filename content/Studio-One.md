@@ -22,7 +22,7 @@ pros:
   - Popular due to its efficient workflow
   - Powerful Chord Selector plugin
 cons:
-  - Restricted to one-window interface
+  - Restricted to a one-window interface
 plugin:
   - VST
   - AU
@@ -33,7 +33,7 @@ interface:
 
 ## Create without boundaries, produce without limits
 
-PreSonus Studio One 4 feels snappy and excels at delivering customers what they ask for. It is a first choice option for many producers to explore new creative possibilities.
+PreSonus Studio One 4 feels snappy and excels at delivering customers what they asked for. It is a first choice option for many producers to explore new creative possibilities.
 
 ### Improve your chord progressions
 

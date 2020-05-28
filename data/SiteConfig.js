@@ -3,7 +3,7 @@ const config = {
   siteTitleShort: "DAW Comparison", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "DAW Comparison | Find the ideal DAW for your needs.", // Alternative site title for SEO.
   siteLogo: "/logos/dawcomparison-logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://dawcomparison.netlify.app", // Domain of your website without pathPrefix.
+  siteUrl: "https://dawcomparison.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links.
   siteDescription:
     // eslint-disable-next-line max-len
@@ -11,7 +11,7 @@ const config = {
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssTitle: "DAW Comparison RSS feed", // Title of the RSS feed
   googleAnalyticsID: "UA-81701707-2", // GA tracking ID.
-  disqusShortname: "https-dawcomparison-netlify-app", // Disqus shortname.
+  disqusShortname: "https-dawcomparison-netlify-app", // Disqus shortname, cannot be changed.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 0, // Amount of posts displayed per listing page.

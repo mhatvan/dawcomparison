@@ -11,8 +11,8 @@ const Footer = ({ config }) => {
           <Typography.Text>{config.copyright}</Typography.Text>
         </Space>
       </Col>
-      <Col xs={24} md={12} style={{ textAlign: "right" }}>
-        <Menu mode="horizontal">
+      <Col xs={24} md={12}>
+        <Menu mode="horizontal" style={{ textAlign: "right" }}>
           <Menu.Item key="imprint">
             <Link to="/imprint">Imprint</Link>
           </Menu.Item>

@@ -45,9 +45,9 @@ Ableton Live can be used in a lot of ways, you can see it being used by:
 
 With its versatile collection of instruments, sounds, kits and loops out of the box, you can use it for creating any kind of music.
 
-Ableton Live can convince its users with a clean and easy-to-use design and track automation features are incredible.
+Ableton Live can convince its users with a clean and easy-to-use design and the track automation features are incredible.
 
-With the biggest usage share coming from bedroom producers for EDM music, it definitely deserves its space as favorite DAW that a lot of producers choose without ever looking back.
+With the biggest usage share coming from bedroom producers working on EDM music, it definitely deserves its reputation as one of the best DAWs that a lot of producers choose without ever looking back.
 
 ### Currently, you can get Ableton Live in three different versions
 

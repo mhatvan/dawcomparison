@@ -34,7 +34,8 @@ interface:
 
 ## Industry standard DAW
 
-Pro Tools, released by Avid Technology, is the go-to industry standard for studio recording engineers and mixing & mastering engineers. Designed to be extremely versatile and detailed, you can speed up your workflow by using a template setup based on what your current session requires.
+Pro Tools, released by Avid Technology, is the go-to industry standard for studio recording engineers and mixing & mastering engineers. Designed to be extremely versatile and highly detailed in functionality, you can expect your productions to become more professional in its
+entirety while progressing fast. When you find yourself repeating the same steps in your productions too often, speed up your workflow by using a template setup based on what your current session requires.
 
 ### Top notch audio quality
 
@@ -43,21 +44,21 @@ You will find that most functions in the UI are easily accessible and Pro Tools 
 
 ### Pro Tools for everyone
 
-Pro Tools gives you the option to choose between three different versions
+Pro Tools gives you the option to choose between three different versions:
 
-#### Pro Tools | First
+#### 1) Pro Tools | First
 
 Free version for students, musicians and podcasters to get to know Pro Tools.
 
-#### Pro Tools
+#### 2) Pro Tools
 
 Standard version of the audio-production software geared towards musicians and engineers.
 
-#### Pro Tools | Ultimate
+#### 3) Pro Tools | Ultimate
 
 Ultimate version for additional use cases like audio post productions and film scoring.
 
-#### Purchase your personalized fit through a myriad of options
+### Purchase your personalized fit through a myriad of options
 
 There are pricing tiers for
 
@@ -71,6 +72,6 @@ which are further subdivided into memberships for
 - 1-year subscription, paid upfront
 - monthly subscription, paid monthly
 
-Pro Tools also offers you to purchase add-ons like Auto-Tune Pro or even merchandise on its checkout page.
+Pro Tools also offers you to purchase add-ons like [Auto-Tune Pro](https://www.antarestech.com/product/auto-tune-pro/) or even merchandise on its checkout page.
 
 For a one-time purchase of the Pro Tools standard edition, you can expect a price of about \$615, but since the pricing is quite complex and dependent on a lot of options, please refer to the [website](https://www.avid.com/pro-tools) for your personalized offer.

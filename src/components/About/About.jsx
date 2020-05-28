@@ -21,19 +21,29 @@ class About extends Component {
         <Typography.Paragraph>
           Since I started producing electronic music a couple years ago, I was
           interested in trying and checking out new tools like DAWs or VSTs.
-          Most resources that you find on the web are reviews and pros & cons
-          lists which are outdated by a year or more the moment you read it.
-          This can give you a wrong impression because you might be reading
-          about missing features that have already been added in the meantime or
-          bugs that have been fixed.
+        </Typography.Paragraph>
+
+        <Typography.Paragraph>
+          Most resources that you find on the web when looking for DAWs are
+          reviews and pros & cons lists which are outdated by a year or more the
+          moment you read it. This can give you a wrong impression because you
+          might be reading about missing features that have already been added
+          in the meantime or bugs that have been fixed.
         </Typography.Paragraph>
 
         <Typography.Title level={2}>The solution</Typography.Title>
 
         <Typography.Paragraph>
-          My vision is that the content is crowd-sourced and therefore always up
-          to date and helpful to visitors of the site. It is a win-win
-          situation: I want to learn about{" "}
+          My vision is that the content is{" "}
+          <a
+            href="https://crowdsourcingweek.com/what-is-crowdsourcing/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            crowd-sourced
+          </a>{" "}
+          and therefore always up to date and helpful to visitors of the site.
+          It is a win-win situation: I want to learn about{" "}
           <a href="https://www.gatsbyjs.org/">Gatsby</a>, visitors of the
           website can gather information and the companies behind the DAWs get
           free promotion. The website provides an easy way of filtering content
@@ -48,8 +58,12 @@ class About extends Component {
         <Typography.Paragraph>
           I am not a content writer and never intended to be. There certainly
           are unintended mistakes within the DAW marketing texts that I
-          apologize for. When you find an issue, just open a pull request or
-          start a new feature request for{" "}
+          apologize for.
+        </Typography.Paragraph>
+
+        <Typography.Paragraph>
+          When you find an issue, just open a pull request or start a new
+          feature request for{" "}
           <a
             href="https://github.com/mhatvan/dawcomparison"
             target="_blank"

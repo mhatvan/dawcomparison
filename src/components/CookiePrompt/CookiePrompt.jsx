@@ -9,12 +9,7 @@ const CookiePrompt = () => {
 
   const hasDNTEnabled = () => {
     if (typeof window !== `undefined`) {
-      if (
-        window.doNotTrack ||
-        navigator.doNotTrack ||
-        navigator.msDoNotTrack ||
-        "msTrackingProtectionEnabled" in window.external
-      ) {
+      if (window.doNotTrack || navigator.doNotTrack || navigator.msDoNotTrack) {
         // The browser supports Do Not Track!
 
         if (
@@ -22,7 +17,8 @@ const CookiePrompt = () => {
           navigator.doNotTrack == "yes" ||
           navigator.doNotTrack == "1" ||
           navigator.msDoNotTrack == "1" ||
-          window.external.msTrackingProtectionEnabled()
+          ("function" == typeof window.external.msTrackingProtectionEnabled() &&
+            window.external.msTrackingProtectionEnabled())
         ) {
           // Do Not Track is enabled!
           return true;
@@ -44,10 +40,17 @@ const CookiePrompt = () => {
           declineCookieValue={false}
           cookieName="gdpr-analytics-enabled"
           onAccept={handleAcceptCookies}
-          style={{ background: "rgba(61,65,66,0.85)", padding: 10 }}
+          style={{
+            background: "rgba(61,65,66,0.85)",
+            padding: "10px 0",
+            justifyContent: "space-evenly",
+          }}
           disableButtonStyles
           buttonClasses="ant-btn"
-          // buttonStyle={{ margin: "10px 0" }}
+          contentStyle={{
+            flex: "unset",
+            margin: "15px",
+          }}
           declineButtonStyle={{ marginRight: 10 }}
           declineButtonClasses="ant-btn"
         >

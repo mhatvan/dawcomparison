@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Menu, Drawer, Button } from "antd";
 import "./Navbar.css";
 
 const RightMenu = ({ mode = "horizontal" }) => (
   <Menu mode={mode}>
-    {/* <Menu.Item key="what-is-daw">
+    <Menu.Item key="what-is-daw">
       <Link to="/what-is-daw">What is a DAW?</Link>
-    </Menu.Item> */}
+    </Menu.Item>
     <Menu.Item key="about">
       <Link to="/about">About</Link>
     </Menu.Item>
@@ -22,8 +23,8 @@ const RightMenu = ({ mode = "horizontal" }) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Github
-        {/* <FontAwesomeIcon icon={faGithub} style={{ width: 14 }} /> */}
+        <span style={{ marginRight: 10 }}>Github</span>
+        <FontAwesomeIcon icon={faGithub} style={{ width: 14 }} />
       </a>
     </Menu.Item>
   </Menu>
@@ -32,8 +33,8 @@ const RightMenu = ({ mode = "horizontal" }) => (
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
-  const showDrawer = () => {
-    setVisible(true);
+  const toggleDrawer = () => {
+    setVisible(!visible);
   };
 
   const onClose = () => {
@@ -56,7 +57,7 @@ const Navbar = () => {
         <RightMenu />
       </div>
 
-      <Button className="burgerPos" onClick={showDrawer}>
+      <Button className="burgerPos" onClick={toggleDrawer}>
         <FontAwesomeIcon icon={faBars} />
       </Button>
       <Drawer

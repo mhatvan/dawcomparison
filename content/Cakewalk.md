@@ -34,7 +34,7 @@ interface:
 
 ## Cakewalk is back
 
-After BandLab Technologies acquired the intellectual property of SONAR's Cakewalk Inc. in 2018, they relaunched Cakewalk as free-to-download and continued development and adding features. Amazing things do happen!
+After BandLab Technologies acquired the intellectual property of SONAR's Cakewalk Inc. in 2018, they relaunched Cakewalk as free-to-download software and continued development and adding new features. Amazing things do happen!
 
 ### Precision audio technology
 

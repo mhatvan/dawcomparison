@@ -21,8 +21,8 @@ genre: "Any genre"
 video: "https://www.youtube-nocookie.com/embed/GG-ceH6fLw4"
 website: "https://new.steinberg.net/nuendo/"
 pros:
-  - Focused in depth on game audio, film and TV
   - Many large companies rely and trust Nuendo
+  - Focused in depth on game audio, film and TV
   - Customizable workflow
 cons:
   - Price could be a no-go for many potential users
@@ -36,15 +36,15 @@ interface:
 
 ## Most advanced audio post-production solution on the market
 
-Although Steinberg Nuendo's main target groups include companies which deal with game audio, post-production for film and TV, it is a powerful tool to work with music production as well. Out of the box, you can profit from a great number of musical effects built in and VST instruments such as HALion Sonic SE 3 and Retrologue 2.
+Although Steinberg Nuendo's main target groups include companies which deal with game audio, post-production for film and TV, it is a powerful tool to work with music production as well. Out of the box, you can profit from a great number of musical effects built in and VST instruments such as [HALion Sonic SE 3](https://www.steinberg.net/en/landing_pages/halion_sonic_se_3/halion_sonic_se_free.html) and [Retrologue 2](https://new.steinberg.net/retrologue/).
 
 ### Create immersive audio experience without any hassle
 
-Steinberg Nuendo 10 features new plugins such as "VoiceDesigner", which can be helpful when trying to create nightmarish sounding vocals for e.g. Metal or Dubstep and the "Doppler" plugin, which will certainly catch the listeners attention when applied onto a synth or a pad sound.
+Steinberg Nuendo 10 features new plugins such as "VoiceDesigner", which can be helpful when trying to create nightmarish sounding vocals for genres like Metal or Dubstep as well as the "Doppler" plugin, which will certainly catch the listeners attention when applied onto a synth or a pad sound.
 
 ### Differences to Cubase
 
-When compared to the other well-known DAW from Steinberg called "Cubase", Nuendo supports a higher audio resolution of up to 384 kHz and up to 22.2 True Multichannel Audio Path surround sound. Additionally, it packs more effect plugins and enables advanced post production/ game-audio and dialog editing features naturally. If you've used Cubase before, you will be able to get in the groove fast, since the Steinberg team made both UI interfaces look consistently similar.
+When compared to the other well-known DAW from Steinberg called [Cubase](https://dawcomparison.com/cubase), Nuendo supports a higher audio resolution of up to 384 kHz and up to 22.2 True Multichannel Audio Path surround sound. Additionally, it packs more effect plugins and enables advanced post production, game-audio and dialog editing features naturally. If you've used Cubase before, you will be able to get in to the groove fast because the Steinberg team made both UI interfaces look consistently similar.
 
 ### Currently, you can get Steinberg Nuendo in three different versions
 
