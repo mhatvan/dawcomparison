@@ -16,9 +16,7 @@ const CookiePrompt = () => {
           window.doNotTrack == "1" ||
           navigator.doNotTrack == "yes" ||
           navigator.doNotTrack == "1" ||
-          navigator.msDoNotTrack == "1" ||
-          ("function" == typeof window.external.msTrackingProtectionEnabled() &&
-            window.external.msTrackingProtectionEnabled())
+          navigator.msDoNotTrack == "1"
         ) {
           // Do Not Track is enabled!
           return true;

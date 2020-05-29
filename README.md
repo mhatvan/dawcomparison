@@ -8,13 +8,13 @@ This open-source and non-profit project is meant to help out bedroom
 producers, audiophile hobbyists & bands who are just starting out to
 find the perfect digital audio workstation (DAW) for their use case.
 
-## Interested in contributing to the project ?
+## Interested in contributing to the project?
 
 For bugs, just open a pull request.
 
 For new feature requests, you can open a new issue and see if it finds approval.
 
-## Help appreciated to keep the content up to date !
+## Help appreciated to keep the content up to date!
 
 Since there is no API for DAWs, the information is mostly static and will need continous content updates.
 

@@ -1,3 +1,6 @@
+const generatedYear = new Date().getFullYear();
+const didInitialYearPass = generatedYear > 2020;
+
 const config = {
   siteTitle: "DAW Comparison", // Site title.
   siteTitleShort: "DAW Comparison", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
@@ -18,7 +21,9 @@ const config = {
   userName: "Markus Hatvan", // Username to display in the author segment.
   userEmail: "markus_hatvan@aon.at", // Email used for RSS feed's author segment
   userLocation: "Vienna, Austria", // User location to display in the author segment.
-  copyright: `Copyright © ${new Date().getFullYear()} Markus Hatvan`, // Copyright string for the footer of the website and RSS feed.
+  copyright: `Copyright © 2020${
+    didInitialYearPass ? `-${generatedYear}` : ""
+  }, DAW Comparison.`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#3b58bf8f", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
 };
