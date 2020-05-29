@@ -258,16 +258,16 @@ const DawCard = ({ postEdges }) => {
             />
 
             <Button
-              onClick={() => changeViewMode("list")}
+              onClick={() => changeViewMode("table")}
               icon={<FontAwesomeIcon icon={faTable} />}
-              title="List view"
-              {...(viewMode === "list" ? { type: "primary" } : {})}
+              title="Table view"
+              {...(viewMode === "table" ? { type: "primary" } : {})}
             />
           </Button.Group>
         </Col>
       </Row>
       <Row gutter={[16, 32]}>
-        {viewMode === "list" ? (
+        {viewMode === "table" ? (
           <Col xs={24}>
             <DawTable posts={posts} />
           </Col>
@@ -286,7 +286,11 @@ const DawCard = ({ postEdges }) => {
                 >
                   <Card
                     cover={
-                      <Image src={post.cover.slice(1)} alt="DAW preview" />
+                      <>
+                        <Link to={post.path} key={post.title}>
+                          <Image src={post.cover.slice(1)} alt="DAW preview" />
+                        </Link>
+                      </>
                     }
                     className="cardBoxShadow"
                     actions={[

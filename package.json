@@ -1,7 +1,7 @@
 {
   "name": "dawcomparison",
   "description": "Compare and find the ideal DAW for your needs.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Markus Hatvan <markus_hatvan@aon.at>",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",

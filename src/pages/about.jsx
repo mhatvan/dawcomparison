@@ -8,7 +8,13 @@ class AboutPage extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`About | ${config.siteTitle}`} />
+        <Helmet>
+          <title>About | {config.siteTitle}</title>
+          <meta
+            name="description"
+            content="This open-source and non-profit project is meant to help out bedroom producers, audiophile hobbyists & new bands."
+          />
+        </Helmet>
         <About />
       </Layout>
     );

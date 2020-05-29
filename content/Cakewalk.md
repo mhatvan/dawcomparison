@@ -32,7 +32,7 @@ interface:
   - WDM
 ---
 
-## Cakewalk is back
+## Cakewalk is back!
 
 After BandLab Technologies acquired the intellectual property of SONAR's Cakewalk Inc. in 2018, they relaunched Cakewalk as free-to-download software and continued development and adding new features. Amazing things do happen!
 

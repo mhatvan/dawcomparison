@@ -8,7 +8,13 @@ class PrivacyPolicyPage extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`Privacy Policy | ${config.siteTitle}`} />
+        <Helmet>
+          <title>Privacy Policy | {config.siteTitle}</title>
+          <meta
+            name="description"
+            content="When you visit websites today, certain information is automatically created and stored, including on this website."
+          />
+        </Helmet>
         <PrivacyPolicy />
       </Layout>
     );

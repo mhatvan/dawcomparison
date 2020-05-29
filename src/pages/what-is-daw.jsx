@@ -8,7 +8,13 @@ class WhatIsDawPage extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`What is a DAW? | ${config.siteTitle}`} />
+        <Helmet>
+          <title>What is a DAW? | {config.siteTitle}</title>
+          <meta
+            name="description"
+            content="A DAW, short for digital audio workstation, is a music production software that is best used for recording, editing and producing audio tracks."
+          />
+        </Helmet>
         <WhatIsDaw />
       </Layout>
     );
