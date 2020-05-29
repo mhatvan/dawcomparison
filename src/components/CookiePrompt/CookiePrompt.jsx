@@ -7,6 +7,12 @@ const CookiePrompt = () => {
     window.trackGoogleAnalytics();
   };
 
+  const handleDeclineCookies = () => {
+    if (typeof window !== `undefined`) {
+      window.gaOptout();
+    }
+  };
+
   const hasDNTEnabled = () => {
     if (typeof window !== `undefined`) {
       if (window.doNotTrack || navigator.doNotTrack || navigator.msDoNotTrack) {
@@ -38,6 +44,7 @@ const CookiePrompt = () => {
           declineCookieValue={false}
           cookieName="gdpr-analytics-enabled"
           onAccept={handleAcceptCookies}
+          onDecline={handleDeclineCookies}
           style={{
             background: "rgba(61,65,66,0.85)",
             padding: "10px 0",
@@ -51,6 +58,7 @@ const CookiePrompt = () => {
           }}
           declineButtonStyle={{ marginRight: 10 }}
           declineButtonClasses="ant-btn"
+          sameSite="strict"
         >
           Our website uses cookies to analyze how the site is used and to ensure
           your experience is consistent between visits.{" "}

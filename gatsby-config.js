@@ -98,7 +98,7 @@ module.exports = {
           controlCookieName: "gdpr-analytics-enabled",
         },
         // Defines the environments where the tracking should be available  - default is ["production"]
-        environments: ["development"],
+        environments: ["development", "production"],
       },
     },
     {
