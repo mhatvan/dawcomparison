@@ -1,5 +1,6 @@
 body {
   font-family: "Open Sans" !important;
+  background: ghostwhite;
 }
 
 body.has-navbar-fixed-top,
@@ -35,7 +36,6 @@ html.has-navbar-fixed-top {
 .layout-container {
   min-height: calc(100vh - 97px);
   padding: 15px;
-  background: ghostwhite;
 }
 
 .gatsby-image-wrapper > div {

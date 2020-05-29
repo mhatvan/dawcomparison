@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
 
       <Button className="burgerPos" onClick={toggleDrawer}>
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon icon={faBars} style={{ width: "0.875em" }} />
       </Button>
       <Drawer
         title="DAW Comparison"
