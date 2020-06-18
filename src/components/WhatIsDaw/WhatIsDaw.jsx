@@ -46,9 +46,9 @@ class WhatIsDaw extends Component {
             alt="DAW Setup"
             style={{ maxWidth: 400, width: "100%" }}
           />
-          <Typography.Text type="secondary" style={{ margin: "10px 0" }}>
+          <p style={{ textAlign: "center", marginTop: 5 }}>
             Photo by Dmitry Novozhilov on Unsplash
-          </Typography.Text>
+          </p>
         </figure>
 
         <Typography.Paragraph>

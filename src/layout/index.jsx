@@ -13,13 +13,13 @@ export default class MainLayout extends React.Component {
     return (
       <>
         <Navbar />
-        <div className="layout-container">
+        <main className="layout-container">
           <Helmet>
             <meta name="description" content={config.siteDescription} />
             <html lang="en" className="has-navbar-fixed-top" />
           </Helmet>
           {children}
-        </div>
+        </main>
         <Footer config={config} />
 
         <CookiePrompt />

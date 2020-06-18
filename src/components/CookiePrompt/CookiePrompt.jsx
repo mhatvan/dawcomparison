@@ -3,14 +3,12 @@ import CookieConsent from "react-cookie-consent";
 
 const CookiePrompt = () => {
   const handleAcceptCookies = () => {
-    document.cookie = `gdpr-analytics-enabled=true;path=${location.pathname}`;
+    document.cookie = `gdpr-analytics-enabled=true;path=${location.pathname};secure;samesite=none`;
     window.trackGoogleAnalytics();
   };
 
   const handleDeclineCookies = () => {
-    if (typeof window !== `undefined`) {
-      window.gaOptout();
-    }
+    document.cookie = `gdpr-analytics-enabled=false;path=${location.pathname};secure;samesite=none`;
   };
 
   const hasDNTEnabled = () => {

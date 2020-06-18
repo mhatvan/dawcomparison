@@ -160,6 +160,23 @@ const DawCard = ({ postEdges }) => {
 
   return (
     <div className="container">
+      <h1>Find the ideal digital audio workstation for your needs.</h1>
+      <h2>
+        Compare digital audio workstations for music production that are
+        available on the market.
+      </h2>
+      <p>We display a breakdown of the pros & cons different DAWs offer.</p>
+      <p>
+        The best digital audio workstation for your individual use case is
+        waiting for you!
+      </p>
+      <p>
+        You will find the optimal fit for your needs through our easy-to-use
+        interface that will deliver you the right music production software.
+      </p>
+
+      <br />
+
       <Row gutter={[16, 8]} align="middle">
         <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <Input
@@ -206,7 +223,7 @@ const DawCard = ({ postEdges }) => {
         <Col xs={24} sm={12} md={12} lg={12} xl={4}>
           <Select
             allowClear
-            placeholder="OS"
+            placeholder="Operating system"
             optionFilterProp="children"
             onChange={handleOSFilter}
             style={{ width: "100%" }}
@@ -331,41 +348,40 @@ const DawCard = ({ postEdges }) => {
       <Row gutter={[16, 32]}>
         <Col span={24}>
           {activeFiltering &&
-          filteredData.length === 0 &&
-          viewMode === "card" ? (
-            <Result
-              status="info"
-              title="No DAWs found for this search term."
-              subTitle="Try another search!"
-            />
-          ) : (
-            <>
-              <Alert
-                message="Note that all prices listed above are estimated and can be
+            filteredData.length === 0 &&
+            viewMode === "card" && (
+              <Result
+                status="info"
+                title="No DAWs found for this search term."
+                subTitle="Try another search!"
+              />
+            )}
+          <>
+            <Alert
+              message="Note that all prices listed above are estimated and can be
                   deviating due to currency differences or active discounts."
-                type="info"
-              />
-              <br />
-              <Alert
-                message={
-                  <>
-                    Didn&#39;t find the DAW you were looking for or found a bug?
-                    Write me on{" "}
-                    <a
-                      href="https://github.com/mhatvan/dawcomparison/issues/new"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>{" "}
-                    or <a href="mailto:markus_hatvan@aon.at">Email</a> to
-                    include it.
-                  </>
-                }
-                type="info"
-              />
-            </>
-          )}
+              type="info"
+            />
+            <br />
+            <Alert
+              message={
+                <>
+                  Didn&#39;t find the DAW you were looking for or found a bug?
+                  Write me on{" "}
+                  <a
+                    href="https://github.com/mhatvan/dawcomparison/issues/new"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>{" "}
+                  or <a href="mailto:markus_hatvan@aon.at">Email</a> to include
+                  it.
+                </>
+              }
+              type="info"
+            />
+          </>
         </Col>
       </Row>
     </div>
