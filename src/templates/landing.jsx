@@ -36,14 +36,18 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             title
-            cover
+            cover {
+              relativePath
+            }
             date
             price
             os
             genre
             useCase
             maker
-            logo
+            logo {
+              relativePath
+            }
             version
             website
             plugin

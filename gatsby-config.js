@@ -206,7 +206,9 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      cover
+                      cover {
+                        relativePath
+                      }
                       date
                     }
                   }

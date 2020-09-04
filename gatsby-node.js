@@ -58,7 +58,9 @@ exports.createPages = async ({ graphql, actions }) => {
             }
             frontmatter {
               title
-              cover
+              cover {
+                relativePath
+              }
               date
               price
               os

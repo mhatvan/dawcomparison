@@ -107,7 +107,7 @@ export default class PostTemplate extends React.Component {
             </Card>
 
             <div className="logo-wrapper">
-              <Image src={post.logo.slice(1)} alt="DAW logo" />
+              <Image src={post.logo.relativePath} alt="DAW logo" />
             </div>
           </Card>
 
@@ -126,7 +126,9 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        cover
+        cover {
+          relativePath
+        }
         date
         video
         price
@@ -134,7 +136,9 @@ export const pageQuery = graphql`
         genre
         useCase
         maker
-        logo
+        logo {
+          relativePath
+        }
         version
         website
         pros

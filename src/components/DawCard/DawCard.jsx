@@ -305,7 +305,10 @@ const DawCard = ({ postEdges }) => {
                     cover={
                       <>
                         <Link to={post.path} key={post.title}>
-                          <Image src={post.cover.slice(1)} alt="DAW preview" />
+                          <Image
+                            src={post.cover.relativePath}
+                            alt="DAW preview"
+                          />
                         </Link>
                       </>
                     }
@@ -336,7 +339,7 @@ const DawCard = ({ postEdges }) => {
                     />
 
                     <div className="logo-wrapper">
-                      <Image src={post.logo.slice(1)} alt="DAW logo" />
+                      <Image src={post.logo.relativePath} alt="DAW logo" />
                     </div>
                   </Card>
                 </Col>
